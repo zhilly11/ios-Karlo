@@ -4,28 +4,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var keyword: String = ""
-    @State private var inputArray: [String] = []
+    @StateObject var positiveKeywordViewModel: KeywordViewModel = .init()
     @State private var isErrorKeyword: Bool = false
     @State private var keywordError: KeywordError? = nil
-    
-    private var showingKeyword: Bool {
-        return inputArray.count > 0 ? true : false
-    }
     
     var body: some View {
         VStack {
             Form {
-                Section {
+                Section("긍정 제시어 입력") {
                     HStack {
                         TextField(
                             "제시어",
-                            text: $keyword
+                            text: $positiveKeywordViewModel.tagText
                         )
                         .submitLabel(.done)
                         
                         Button("추가") {
-                            determine(keyword: keyword)
+                            determine(keyword: $positiveKeywordViewModel.tagText.wrappedValue)
                         }
                         .alert(isPresented: $isErrorKeyword, error: keywordError) {
                             Button("OK", role: .cancel) { }
@@ -33,38 +28,50 @@ struct ContentView: View {
                     }
                 }
                 
-                if showingKeyword {
-                    Section("제시어") {
-                        List {
-                            ForEach(inputArray, id: \.self) { string in
-                                Text(string)
-                            }
-                            .onDelete { indexSet in
-                                inputArray.remove(atOffsets: indexSet)
+                Section("긍정 제시어") {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 4) {
+                            ForEach(positiveKeywordViewModel.rows, id:\.self) { rows in
+                                HStack(spacing: 6) {
+                                    ForEach(rows) { row in
+                                        Text(row.name)
+                                            .font(.system(size: 16))
+                                            .padding(.leading, 14)
+                                            .padding(.trailing, 30)
+                                            .padding(.vertical, 8)
+                                            .background(
+                                                ZStack(alignment: .trailing) {
+                                                    Capsule()
+                                                        .fill(.ultraThinMaterial)
+                                                    Button {
+                                                        positiveKeywordViewModel.removeTag(by: row.id)
+                                                    } label: {
+                                                        Image(systemName: "xmark")
+                                                            .frame(width: 15, height: 15)
+                                                            .padding(.trailing, 8)
+                                                            .foregroundColor(.red)
+                                                    }
+                                                }
+                                            )
+                                    }
+                                }
+                                .frame(height: 28)
+                                .padding(.bottom, 10)
                             }
                         }
+                        .padding(.top, 20)
                     }
                 }
             }
         }
     }
     
-    private func isCorrect(_ keyword: String) throws -> Bool {
-        if keyword == "" { throw KeywordError.emptyKeyword }
-        if keyword.hasHangul { throw KeywordError.containHangul }
-        if keyword.count >= 256 { throw KeywordError.overRange }
-        
-        return true
-    }
-    
     private func determine(keyword: String) {
         isErrorKeyword = false
         
         do {
-            isErrorKeyword = try !isCorrect(keyword)
+            try positiveKeywordViewModel.addTag()
             keywordError = nil
-            inputArray.append(keyword)
-            self.keyword = ""
         } catch let error as KeywordError {
             isErrorKeyword = true
             keywordError = error
