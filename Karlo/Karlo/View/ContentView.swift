@@ -11,25 +11,27 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Form {
-                Section("긍정 제시어 입력") {
-                    KeywordInputView(isErrorKeyword: $isErrorKeyword, keywordError: $keywordError)
-                        .environmentObject(positiveKeywordViewModel)
-                }
-                
-                Section("긍정 제시어") {
-                    KeywordTagView()
-                        .environmentObject(positiveKeywordViewModel)
-                }
-                
-                Section("부정 제시어 입력") {
-                    KeywordInputView(isErrorKeyword: $isErrorKeyword, keywordError: $keywordError)
-                        .environmentObject(negativeKeywordViewModel)
-                }
-                
-                Section("부정 제시어") {
-                    KeywordTagView()
-                        .environmentObject(negativeKeywordViewModel)
+            HStack {
+                Form {
+                    Section("긍정 제시어 입력") {
+                        KeywordInputView(isErrorKeyword: $isErrorKeyword, keywordError: $keywordError)
+                            .environmentObject(positiveKeywordViewModel)
+                    }
+                    
+                    Section("긍정 제시어") {
+                        KeywordTagView()
+                            .environmentObject(positiveKeywordViewModel)
+                    }
+                    
+                    Section("부정 제시어 입력") {
+                        KeywordInputView(isErrorKeyword: $isErrorKeyword, keywordError: $keywordError)
+                            .environmentObject(negativeKeywordViewModel)
+                    }
+                    
+                    Section("부정 제시어") {
+                        KeywordTagView()
+                            .environmentObject(negativeKeywordViewModel)
+                    }
                 }
             }
         }
