@@ -80,4 +80,8 @@ class KeywordViewModel: ObservableObject {
         
         return true
     }
+    
+    func exportPrompt() -> String {
+        return tags.map { $0.name }.joined(separator: ", ")
+    }
 }
