@@ -4,14 +4,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var positiveKeywordViewModel: KeywordViewModel = .init()
-    @StateObject var negativeKeywordViewModel: KeywordViewModel = .init()
+    @StateObject private var positiveKeywordViewModel: KeywordViewModel = .init()
+    @StateObject private var negativeKeywordViewModel: KeywordViewModel = .init()
+    
+    @State private var imageWidth: Int = 512
+    @State private var imageHeight: Int = 512
+    @State private var imageScale: Bool = false
+    @State private var imageQuality: Double = 70
+    @State private var imageCount: Int = 1
+    
+    @State private var isAlbumViewPresented: Bool = false
     @State private var isErrorKeyword: Bool = false
     @State private var keywordError: KeywordError? = nil
-    @State var imageWidth: Int = 512
-    @State var imageHeight: Int = 512
     
-    var imageSizes: [Int] = [384, 512, 640]
+    private var imageSizes: [Int] = [384, 512, 640]
     
     var body: some View {
         VStack {
@@ -62,10 +68,44 @@ struct ContentView: View {
                     }
                 }
                 
+                Section("이미지 확대 여부") {
+                    Toggle(isOn: $imageScale) {
+                        Text("확대")
+                    }
+                    .tint(Color.blue)
+                }
+                
+                Section("이미지 저장 품질(기본값: 70)") {
+                    VStack {
+                        HStack {
+                            Text("품질: \(Int(imageQuality))")
+                        }
+                        
+                        Slider(
+                            value: $imageQuality,
+                            in: 1...100,
+                            step: 1
+                        ) {
+                            Text("품질")
+                        } minimumValueLabel: {
+                            Text("1")
+                        } maximumValueLabel: {
+                            Text("100")
+                        }
+                    }
+                }
+                
+                Section("생성할 이미지 수(기본값: 1, 최대: 8)") {
+                    Stepper(value: $imageCount,
+                            in: 1...8,
+                            step: 1) {
+                        Text("이미지 수: \(imageCount)")
+                    }
+                }
+                
                 Section {
                     Button(action: {
-                        // TODO: 이미지 생성 뷰로 이동
-                        // TODO: ImageInfo 만들어서 넘겨주기
+                        self.isAlbumViewPresented.toggle()
                     }) {
                         Text("이미지 생성하기")
                             .foregroundColor(.white)
@@ -75,9 +115,23 @@ struct ContentView: View {
                             .cornerRadius(10)
                     }
                     .listRowInsets(EdgeInsets())
+                    .sheet(isPresented: $isAlbumViewPresented) {
+                        AlbumView(imageInfo: makeImageInfo())
+                    }
                 }
             }
         }
+    }
+    
+    private func makeImageInfo() -> ImageConfiguration {
+        return ImageConfiguration(prompt: positiveKeywordViewModel.exportPrompt(),
+                                  negativePrompt: negativeKeywordViewModel.exportPrompt(),
+                                  width: imageWidth,
+                                  height: imageHeight,
+                                  upscale: imageScale,
+                                  scale: imageScale ? 2 : 4,
+                                  imageQuality: Int(imageQuality),
+                                  imageCount: imageCount)
     }
 }
 
