@@ -3,7 +3,7 @@
 
 import Foundation
 
-struct ImageConfiguration: Encodable {
+struct ImageConfiguration: Encodable, Equatable {
     let prompt: String
     let negativePrompt: String
     let width: Int
