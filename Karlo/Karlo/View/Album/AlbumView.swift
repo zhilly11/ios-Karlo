@@ -27,21 +27,24 @@ struct AlbumView: View {
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(viewStore.imageData, id: \.self) { data in
-                                if let uiImage = UIImage(data: data) {
-                                    Image(uiImage: uiImage)
+                                if let uiImage: UIImage = .init(data: data) {
+                                    let generatedImage: Image = .init(uiImage: uiImage)
+                                    generatedImage
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: 300, height: 300)
                                         .contextMenu {
-                                            Button(action: {
-                                                // TODO: 공유 기능 구현
-                                            }) {
-                                                Text("공유")
-                                                Image(systemName: "square.and.arrow.up")
-                                            }
+                                            ShareLink(
+                                                item: generatedImage,
+                                                preview: SharePreview(
+                                                    viewStore.imageConfiguration.prompt,
+                                                    image: generatedImage)) {
+                                                        Text("공유")
+                                                        Image(systemName: "square.and.arrow.up")
+                                                    }
                                             
                                             Button(action: {
-                                                // TODO: 저장 기능 구현
+                                                viewStore.send(.saveImage(data: data))
                                             }) {
                                                 Text("저장")
                                                 Image(systemName: "square.and.arrow.down")
@@ -69,6 +72,7 @@ struct AlbumView: View {
                             .bold()
                         Text(viewStore.imageConfiguration.prompt)
                             .font(.body)
+                        Spacer()
                     }
                     
                     HStack(alignment: .top) {
@@ -77,6 +81,7 @@ struct AlbumView: View {
                             .bold()
                         Text(viewStore.imageConfiguration.negativePrompt)
                             .font(.body)
+                        Spacer()
                     }
                     
                     HStack(alignment: .top) {
@@ -85,6 +90,7 @@ struct AlbumView: View {
                             .bold()
                         Text("\(viewStore.imageConfiguration.width) * \(viewStore.imageConfiguration.height) px")
                             .font(.body)
+                        Spacer()
                     }
                 }
                 .padding(.top, 10)
@@ -103,6 +109,9 @@ struct AlbumView: View {
             .onAppear{
                 viewStore.send(.onAppear)
             }
+            .alert(
+                store: self.store.scope(state: \.$alert, action: { .alert($0) })
+            )
         }
     }
 }
