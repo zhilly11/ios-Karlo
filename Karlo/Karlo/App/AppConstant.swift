@@ -38,7 +38,6 @@ enum Constant {
         static let imageSize: String = "이미지 크기"
         
         static let generatingImage: String = "이미지 생성중..."
-        static let imageSaveDescription: String = "이미지를 길게 누르면 저장 가능합니다."
     }
     
     struct Symbol {
@@ -55,6 +54,10 @@ enum Constant {
         static let imageSaveSuccess: String = "사진 저장에 성공했습니다."
     }
     
+    struct Description {
+        static let imageSave: String = "이미지를 길게 누르면 저장 가능합니다."
+        static let imageGeneration: String = "제시어에 따라 이미지를 생성하는 기능입니다. 제시어로 계절과 같은 시기적 특징을 반영하도록 하거나, 특정 작가의 스타일을 사용하도록 지정할 수도 있습니다."
+    }
     
     // MARK: - Default Value in Karlo API
     struct Karlo {
@@ -78,6 +81,7 @@ enum Constant {
     struct Layout {
         static let albumImageSize: CGFloat = 300
         static let largeTextSize: CGFloat = 110
+        static let minimumIconSize: CGFloat = 30
         
         struct Spacing {
             static let small: CGFloat = 10
@@ -91,5 +95,6 @@ enum Constant {
         static let share: Image = .init(systemName: "square.and.arrow.up")
         static let save: Image = .init(systemName: "square.and.arrow.down")
         static let info: Image = .init(systemName: "info.circle")
+        static let generation: Image = .init(systemName: "wand.and.stars")
     }
 }

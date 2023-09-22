@@ -61,7 +61,7 @@ struct AlbumView: View {
                         Constant.SystemImage.info
                             .font(.caption)
                             .foregroundColor(.gray)
-                        Text(Constant.Text.imageSaveDescription)
+                        Text(Constant.Description.imageSave)
                             .font(.caption)
                             .foregroundColor(.gray)
                     }

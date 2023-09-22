@@ -17,15 +17,29 @@ struct RootView: View {
         NavigationStack {
             Form {
                 Section {
-                    NavigationLink(
-                        Constant.Title.imageGenerate,
-                        destination: ImageGenerateView(
+                    NavigationLink {
+                        ImageGenerateView(
                             store: self.store.scope(
                                 state: \.imageGenerate,
                                 action: Root.Action.imageGenerate
                             )
                         )
-                    )
+                    } label: {
+                        HStack(spacing: Constant.Layout.Spacing.medium) {
+                            Constant.SystemImage.generation
+                                .resizable()
+                                .frame(width: Constant.Layout.minimumIconSize,
+                                       height: Constant.Layout.minimumIconSize)
+                                .foregroundColor(Color.blue)
+                                
+                            VStack(alignment: .leading, spacing: Constant.Layout.Spacing.small) {
+                                Text(Constant.Title.imageGenerate)
+                                    .bold()
+                                Text(Constant.Description.imageGeneration)
+                                    .font(.caption)
+                            }
+                        }
+                    }
                 }
             }
             .navigationTitle(Constant.Title.appTitle)
