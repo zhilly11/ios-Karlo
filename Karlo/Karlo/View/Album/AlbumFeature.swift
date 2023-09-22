@@ -57,10 +57,10 @@ struct AlbumFeature: Reducer {
                 do {
                     try saveImageToPhotoAlbum(imageData: data)
                     state.alert = AlertState {
-                        TextState("사진 저장에 성공했습니다.")
+                        TextState(Constant.AlertMessage.imageSaveSuccess)
                     } actions: {
                         ButtonState(role: .none) {
-                            TextState("확인")
+                            TextState(Constant.Text.check)
                         }
                     }
                     return .none
@@ -69,7 +69,7 @@ struct AlbumFeature: Reducer {
                         TextState(error.localizedDescription)
                     } actions: {
                         ButtonState(role: .cancel) {
-                            TextState("확인")
+                            TextState(Constant.Text.check)
                         }
                     }
                     return .none

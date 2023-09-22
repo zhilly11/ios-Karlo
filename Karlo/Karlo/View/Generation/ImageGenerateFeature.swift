@@ -8,11 +8,12 @@ struct ImageGenerateFeature: Reducer {
         var prompt = KeywordTagFeature.State()
         var negativePrompt = KeywordTagFeature.State()
         
-        var imageWidth: Int = 512
-        var imageHeight: Int = 512
-        var imageScale: Bool = false
-        var imageQuality: Double = 70
-        var imageCount: Int = 1
+        var imageWidth: Int = Constant.Karlo.imageSize
+        var imageHeight: Int = Constant.Karlo.imageSize
+        var imageUpscale: Bool = Constant.Karlo.imageUpscale
+        var imageScale: Bool = Constant.Karlo.imageScale
+        var imageQuality: Double = Constant.Karlo.imageQuality
+        var imageCount: Int = Constant.Karlo.imageCount
         
         var isAlbumViewPresented: Bool = false
         var albumFeature: AlbumFeature.State?
@@ -24,6 +25,7 @@ struct ImageGenerateFeature: Reducer {
         case negativePrompt(KeywordTagFeature.Action)
         case imageWidthChanged(Int)
         case imageHeightChanged(Int)
+        case imageUpscaleToggle(isOn: Bool)
         case imageScaleToggle(isOn: Bool)
         case imageQualityChanged(Double)
         case imageCountChanged(Int)
@@ -42,6 +44,10 @@ struct ImageGenerateFeature: Reducer {
                 
             case let .imageHeightChanged(value):
                 state.imageHeight = value
+                return .none
+                
+            case let .imageUpscaleToggle(isOn):
+                state.imageUpscale = isOn
                 return .none
                 
             case let .imageScaleToggle(isOn):
@@ -85,8 +91,8 @@ extension ImageGenerateFeature {
             negativePrompt: state.negativePrompt.prompt,
             width: state.imageWidth,
             height: state.imageHeight,
-            upscale: state.imageScale,
-            scale: 2,
+            upscale: state.imageUpscale,
+            scale: state.imageScale == false ? 2 : 4,
             imageQuality: Int(state.imageQuality),
             imageCount: state.imageCount
         )

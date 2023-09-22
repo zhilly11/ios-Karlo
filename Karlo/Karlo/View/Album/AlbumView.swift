@@ -20,9 +20,10 @@ struct AlbumView: View {
             VStack {
                 if viewStore.proceeding {
                     ProgressView() {
-                        Text("이미지 생성 중...")
+                        Text(Constant.Text.generatingImage)
                     }
-                    .frame(width: 300, height: 300)
+                    .frame(width: Constant.Layout.albumImageSize,
+                           height: Constant.Layout.albumImageSize)
                 } else {
                     ScrollView(.horizontal) {
                         HStack {
@@ -32,22 +33,23 @@ struct AlbumView: View {
                                     generatedImage
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(width: 300, height: 300)
+                                        .frame(width: Constant.Layout.albumImageSize,
+                                               height: Constant.Layout.albumImageSize)
                                         .contextMenu {
                                             ShareLink(
                                                 item: generatedImage,
                                                 preview: SharePreview(
                                                     viewStore.imageConfiguration.prompt,
                                                     image: generatedImage)) {
-                                                        Text("공유")
-                                                        Image(systemName: "square.and.arrow.up")
+                                                        Text(Constant.Text.share)
+                                                        Constant.SystemImage.share
                                                     }
                                             
                                             Button(action: {
                                                 viewStore.send(.saveImage(data: data))
                                             }) {
-                                                Text("저장")
-                                                Image(systemName: "square.and.arrow.down")
+                                                Text(Constant.Text.save)
+                                                Constant.SystemImage.save
                                             }
                                         }
                                 }
@@ -56,53 +58,59 @@ struct AlbumView: View {
                     }
                     
                     HStack {
-                        Image(systemName: "info.circle")
+                        Constant.SystemImage.info
                             .font(.caption)
                             .foregroundColor(.gray)
-                        Text("이미지를 길게 누르면 저장 가능합니다.")
+                        Text(Constant.Text.imageSaveDescription)
                             .font(.caption)
                             .foregroundColor(.gray)
                     }
                 }
                 
-                VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .leading, spacing: Constant.Layout.Spacing.medium) {
                     HStack(alignment: .top) {
-                        Text("긍정 제시어 :")
+                        Text(Constant.Text.prompt.convertColonFormat())
                             .font(.title3)
                             .bold()
+                            .frame(width: Constant.Layout.largeTextSize, alignment: .trailing)
                         Text(viewStore.imageConfiguration.prompt)
                             .font(.body)
                         Spacer()
                     }
                     
                     HStack(alignment: .top) {
-                        Text("부정 제시어 :")
+                        Text(Constant.Text.negativePrompt.convertColonFormat())
                             .font(.title3)
                             .bold()
+                            .frame(width: Constant.Layout.largeTextSize, alignment: .trailing)
                         Text(viewStore.imageConfiguration.negativePrompt)
                             .font(.body)
                         Spacer()
                     }
                     
                     HStack(alignment: .top) {
-                        Text("이미지 크기 :")
+                        Text(Constant.Text.imageSize.convertColonFormat())
                             .font(.title3)
                             .bold()
-                        Text("\(viewStore.imageConfiguration.width) * \(viewStore.imageConfiguration.height) px")
+                            .frame(width: Constant.Layout.largeTextSize, alignment: .trailing)
+                        Text(Constant.Karlo.convertImageSizeString(
+                            width: viewStore.imageConfiguration.width,
+                            height: viewStore.imageConfiguration.height)
+                        )
                             .font(.body)
                         Spacer()
                     }
                 }
-                .padding(.top, 10)
-                .padding(.leading, 10)
-                .padding(.trailing, 10)
+                .padding(.top, Constant.Layout.Spacing.small)
+                .padding(.leading, Constant.Layout.Spacing.small)
+                .padding(.trailing, Constant.Layout.Spacing.small)
                 
                 Spacer()
             }
-            .navigationTitle("생성된 이미지")
+            .navigationTitle(Constant.Title.generatedImage)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button("닫기") {
+                Button(Constant.Text.close) {
                     dismiss()
                 }
             }

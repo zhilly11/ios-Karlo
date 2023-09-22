@@ -16,14 +16,14 @@ struct KeywordInputView: View {
     var body: some View {
         HStack {
             TextField(
-                "제시어",
+                Constant.Text.prompt,
                 text: viewStore.binding(
                     get: \.tagText,
                     send: KeywordTagFeature.Action.textChanged
                 )
             )
             
-            Button("추가") {
+            Button(Constant.ButtonTitle.add) {
                 viewStore.send(.addTag)
             }
             .alert(

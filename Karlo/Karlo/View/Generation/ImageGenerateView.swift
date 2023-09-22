@@ -17,16 +17,15 @@ struct ImageGenerateView: View {
         NavigationStack {
             VStack {
                 Form {
-                    Section("긍정 제시어 입력") {
+                    Section(Constant.Title.Section.promptInput) {
                         KeywordInputView(
                             store: self.store.scope(
                                 state: \.prompt,
                                 action: ImageGenerateFeature.Action.prompt
                             )
                         )
-                    }
-                    
-                    Section("긍정 제시어") {
+                        .listRowSeparator(.hidden)
+                        
                         KeywordTagView(
                             store: self.store.scope(
                                 state: \.prompt,
@@ -35,16 +34,15 @@ struct ImageGenerateView: View {
                         )
                     }
                     
-                    Section("부정 제시어 입력") {
+                    Section(Constant.Title.Section.negativePromptInput) {
                         KeywordInputView(
                             store: self.store.scope(
                                 state: \.negativePrompt,
                                 action: ImageGenerateFeature.Action.negativePrompt
                             )
                         )
-                    }
-                    
-                    Section("부정 제시어") {
+                        .listRowSeparator(.hidden)
+                        
                         KeywordTagView(
                             store: self.store.scope(
                                 state: \.negativePrompt,
@@ -53,61 +51,61 @@ struct ImageGenerateView: View {
                         )
                     }
                     
-                    Section("이미지 사이즈(단위: 픽셀)") {
-                        VStack(alignment: .leading) {
-                            Text("너비")
-                                .font(.caption)
-                            
+                    Section(Constant.Title.Section.imageDetail) {
+                        HStack(alignment: .center, spacing: 30) {
                             Picker(
-                                "너비 사이즈",
+                                Constant.Text.width,
                                 selection: viewStore.binding(
                                     get: \.imageWidth,
                                     send: ImageGenerateFeature.Action.imageWidthChanged
                                 )
                             ) {
-                                ForEach(Constant.imageSizes, id: \.self) {
+                                ForEach(Constant.Karlo.imageSizes, id: \.self) {
                                     Text("\($0)")
                                 }
                             }
-                            .pickerStyle(.segmented)
+                            .pickerStyle(.automatic)
                         }
-                        
-                        VStack(alignment: .leading) {
-                            Text("높이")
-                                .font(.caption)
-                            
+
+                        HStack(alignment: .center, spacing: 30) {
                             Picker(
-                                "높이 사이즈",
+                                Constant.Text.height,
                                 selection: viewStore.binding(
                                     get: \.imageHeight,
                                     send: ImageGenerateFeature.Action.imageHeightChanged
                                 )
                             ) {
-                                ForEach(Constant.imageSizes, id: \.self) {
+                                ForEach(Constant.Karlo.imageSizes, id: \.self) {
                                     Text("\($0)")
                                 }
                             }
-                            .pickerStyle(.segmented)
+                            .pickerStyle(.automatic)
                         }
-                    }
-                    
-                    Section("이미지 확대 여부") {
+
                         Toggle(
-                            "확대",
+                            Constant.Text.upscale,
+                            isOn: viewStore.binding(
+                                get: \.imageUpscale,
+                                send: ImageGenerateFeature.Action.imageUpscaleToggle
+                            )
+                        )
+                        .tint(Color.blue)
+
+                        Toggle(
+                            Constant.Text.scale,
                             isOn: viewStore.binding(
                                 get: \.imageScale,
                                 send: ImageGenerateFeature.Action.imageScaleToggle
                             )
                         )
                         .tint(Color.blue)
-                    }
-                    
-                    Section("이미지 저장 품질(기본값: 70)") {
+
                         VStack {
                             HStack {
-                                Text("품질: \(Int(viewStore.imageQuality))")
+                                Text(Constant.Text.quality.convertColonFormat(with: Int(viewStore.imageQuality)))
+                                Spacer()
                             }
-                            
+
                             Slider(
                                 value: viewStore.binding(
                                     get: \.imageQuality,
@@ -116,18 +114,16 @@ struct ImageGenerateView: View {
                                 in: 1...100,
                                 step: 1
                             ) {
-                                Text("품질")
+                                Text(Constant.Text.quality)
                             } minimumValueLabel: {
-                                Text("1")
+                                Text(String(format: "%0.f", Constant.Karlo.imageQualityMinimum))
                             } maximumValueLabel: {
-                                Text("100")
+                                Text(String(format: "%0.f", Constant.Karlo.imageQualityMaximum))
                             }
                         }
-                    }
-                    
-                    Section("생성할 이미지 수(기본값: 1, 최대: 8)") {
+
                         Stepper(
-                            "이미지 수: \(viewStore.imageCount)",
+                            Constant.Text.imageCount.convertColonFormat(with: viewStore.imageCount),
                             value: viewStore.binding(
                                 get: \.imageCount,
                                 send: ImageGenerateFeature.Action.imageCountChanged
@@ -141,7 +137,7 @@ struct ImageGenerateView: View {
                         Button(action: {
                             viewStore.send(.setSheet(isPresented: true))
                         }) {
-                            Text("이미지 생성하기")
+                            Text(Constant.ButtonTitle.imageGenerate)
                                 .foregroundColor(.white)
                                 .frame(maxWidth: .infinity)
                                 .padding()
@@ -167,7 +163,7 @@ struct ImageGenerateView: View {
                     )
                 }
             }
-            .navigationTitle("이미지 생성하기")
+            .navigationTitle(Constant.Title.imageGenerate)
             .navigationBarTitleDisplayMode(.inline)
         }
     }

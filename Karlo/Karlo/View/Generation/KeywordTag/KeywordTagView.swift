@@ -31,7 +31,7 @@ struct KeywordTagView: View {
                                         Button {
                                             viewStore.send(.removeTag(id: row.id))
                                         } label: {
-                                            Image(systemName: "xmark")
+                                            Constant.SystemImage.xMark
                                                 .frame(width: 15, height: 15)
                                                 .padding(.trailing, 8)
                                                 .foregroundColor(.red)

@@ -9,8 +9,8 @@ struct KeywordTagFeature: Reducer {
         @PresentationState var alert: AlertState<Action.Alert>?
         var rows: [[Tag]] = []
         var tags: [Tag] = []
-        var tagText: String = ""
-        var prompt: String = ""
+        var tagText: String = .init()
+        var prompt: String = .init()
     }
     
     enum KeywordAction: Equatable {
@@ -43,7 +43,7 @@ struct KeywordTagFeature: Reducer {
                         TextState(error.localizedDescription)
                     } actions: {
                         ButtonState(role: .cancel) {
-                            TextState("확인")
+                            TextState(Constant.Text.check)
                         }
                     }
                     return .none
@@ -73,7 +73,7 @@ extension KeywordTagFeature {
         
         if isCorrect {
             state.tags.append(Tag(name: state.tagText))
-            state.tagText = ""
+            state.tagText = .init()
             state.prompt = generatePrompt(state.tags)
             getTags(into: &state)
         }
@@ -123,14 +123,14 @@ extension KeywordTagFeature {
     }
     
     private func isCorrect(_ keyword: String, currentKeywordCount: Int) throws -> Bool {
-        if keyword == "" { throw KeywordError.emptyKeyword }
+        if keyword == .init() { throw KeywordError.emptyKeyword }
         if keyword.hasHangul { throw KeywordError.containHangul }
-        if currentKeywordCount + keyword.count >= 256 { throw KeywordError.overRange }
+        if currentKeywordCount + keyword.count >= Constant.Karlo.promptMaxSize { throw KeywordError.overRange }
         
         return true
     }
     
     private func generatePrompt(_ tags: [Tag]) -> String {
-        return tags.map { $0.name }.joined(separator: ", ")
+        return tags.map { $0.name }.joined(separator: Constant.Symbol.comma)
     }
 }

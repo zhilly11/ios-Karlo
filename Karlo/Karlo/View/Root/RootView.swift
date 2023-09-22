@@ -18,7 +18,7 @@ struct RootView: View {
             Form {
                 Section {
                     NavigationLink(
-                        "이미지 생성하기",
+                        Constant.Title.imageGenerate,
                         destination: ImageGenerateView(
                             store: self.store.scope(
                                 state: \.imageGenerate,
@@ -28,7 +28,7 @@ struct RootView: View {
                     )
                 }
             }
-            .navigationTitle("Karlo!")
+            .navigationTitle(Constant.Title.appTitle)
             .onAppear{ self.store.send(.onAppear) }
         }
     }
