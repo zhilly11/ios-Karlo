@@ -66,6 +66,7 @@ enum Constant {
         static let imageUpscale: Bool = false
         static let imageScale: Bool = false
         static let imageCount: Int = 1
+        static let promptMaxSize: Int = 256
         
         static func convertImageSizeString(width: Int, height: Int) -> String {
             return "\(width) * \(height)px"
