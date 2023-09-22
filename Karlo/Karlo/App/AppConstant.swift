@@ -4,8 +4,7 @@
 import SwiftUI
 
 /// Karlo App에서 사용되는 상수들
-struct Constant {
-    
+enum Constant {
     // MARK: - Navigation, Section Title
     struct Title {
         static let appTitle: String = "Karlo"
