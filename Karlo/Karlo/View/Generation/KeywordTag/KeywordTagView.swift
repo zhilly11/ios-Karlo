@@ -2,14 +2,21 @@
 //  Created by zhilly on 2023/09/07
 
 import SwiftUI
+import ComposableArchitecture
 
 struct KeywordTagView: View {
-    @EnvironmentObject var viewModel: KeywordViewModel
+    private let store: StoreOf<KeywordTagFeature>
+    @ObservedObject private var viewStore: ViewStoreOf<KeywordTagFeature>
+    
+    init(store: StoreOf<KeywordTagFeature>) {
+        self.store = store
+        self.viewStore = ViewStore(self.store, observe: { $0 })
+    }
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 4) {
-                ForEach(viewModel.rows, id:\.self) { rows in
+                ForEach(viewStore.rows, id:\.self) { rows in
                     HStack(spacing: 6) {
                         ForEach(rows) { row in
                             Text(row.name)
@@ -22,9 +29,9 @@ struct KeywordTagView: View {
                                         Capsule()
                                             .fill(.ultraThinMaterial)
                                         Button {
-                                            viewModel.removeTag(by: row.id)
+                                            viewStore.send(.removeTag(id: row.id))
                                         } label: {
-                                            Image(systemName: "xmark")
+                                            Constant.SystemImage.xMark
                                                 .frame(width: 15, height: 15)
                                                 .padding(.trailing, 8)
                                                 .foregroundColor(.red)
