@@ -61,6 +61,8 @@ enum Constant {
     
     // MARK: - Default Value in Karlo API
     struct Karlo {
+        static let license: String = "Powered by Karlo"
+        
         static let imageSizes: [Int] = [384, 512, 640]
         static let imageSize: Int = 512
         static let imageQuality: Double = 70

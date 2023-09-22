@@ -37,8 +37,16 @@ struct RootView: View {
                                     .bold()
                                 Text(Constant.Description.imageGeneration)
                                     .font(.caption)
+                                    .foregroundColor(.gray)
                             }
                         }
+                    }
+                } footer: {
+                    VStack(alignment: .center) {
+                        Text(Constant.Karlo.license)
+                            .foregroundColor(Color.gray)
+                            .frame(alignment: .center)
+                            .frame(maxWidth: .infinity)
                     }
                 }
             }
