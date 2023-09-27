@@ -10,7 +10,7 @@ struct AlbumFeature: Reducer {
     struct AlbumState: Equatable {
         @PresentationState var alert: AlertState<Action.Alert>?
         
-        var imageConfiguration: ImageConfiguration
+        var imageConfigurationRequest: ImageConfigurationRequest
         var imageData: [Data] = []
         var proceeding = false
     }
@@ -29,7 +29,7 @@ struct AlbumFeature: Reducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                return .run { [info = state.imageConfiguration ] send in
+                return .run { [info = state.imageConfigurationRequest ] send in
                     await send(.setProceeding(true))
                     await send(.imageResponse(
                         TaskResult { try await

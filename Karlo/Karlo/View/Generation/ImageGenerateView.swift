@@ -154,7 +154,7 @@ struct ImageGenerateView: View {
                     )
                 ) {
                     let albumFeature = AlbumFeature.State(
-                        imageConfiguration: viewStore.state.imageConfiguration ?? SampleData.sampleImageInfo
+                        imageConfigurationRequest: viewStore.state.imageConfigurationRequest ?? SampleData.sampleImageInfo
                     )
 
                     AlbumView(

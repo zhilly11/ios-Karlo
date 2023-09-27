@@ -17,7 +17,7 @@ struct ImageGenerateFeature: Reducer {
         
         var isAlbumViewPresented: Bool = false
         var albumFeature: AlbumFeature.State?
-        var imageConfiguration: ImageConfiguration?
+        var imageConfigurationRequest: ImageConfigurationRequest?
     }
     
     enum Action: Equatable {
@@ -63,7 +63,7 @@ struct ImageGenerateFeature: Reducer {
                 return .none
                 
             case .setSheet(isPresented: true):
-                state.imageConfiguration = exportImageConfiguration(from: state)
+                state.imageConfigurationRequest = exportImageConfigurationRequest(from: state)
                 state.isAlbumViewPresented = true
                 return .none
                 
@@ -85,8 +85,8 @@ struct ImageGenerateFeature: Reducer {
 }
 
 extension ImageGenerateFeature {
-    func exportImageConfiguration(from state: State) -> ImageConfiguration {
-        return ImageConfiguration(
+    func exportImageConfigurationRequest(from state: State) -> ImageConfigurationRequest {
+        return ImageConfigurationRequest(
             prompt: state.prompt.prompt,
             negativePrompt: state.negativePrompt.prompt,
             width: state.imageWidth,

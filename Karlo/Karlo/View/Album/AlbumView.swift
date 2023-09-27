@@ -39,7 +39,7 @@ struct AlbumView: View {
                                             ShareLink(
                                                 item: generatedImage,
                                                 preview: SharePreview(
-                                                    viewStore.imageConfiguration.prompt,
+                                                    viewStore.imageConfigurationRequest.prompt,
                                                     image: generatedImage)) {
                                                         Text(Constant.Text.share)
                                                         Constant.SystemImage.share
@@ -73,7 +73,7 @@ struct AlbumView: View {
                             .font(.title3)
                             .bold()
                             .frame(width: Constant.Layout.largeTextSize, alignment: .trailing)
-                        Text(viewStore.imageConfiguration.prompt)
+                        Text(viewStore.imageConfigurationRequest.prompt)
                             .font(.body)
                         Spacer()
                     }
@@ -83,7 +83,7 @@ struct AlbumView: View {
                             .font(.title3)
                             .bold()
                             .frame(width: Constant.Layout.largeTextSize, alignment: .trailing)
-                        Text(viewStore.imageConfiguration.negativePrompt)
+                        Text(viewStore.imageConfigurationRequest.negativePrompt)
                             .font(.body)
                         Spacer()
                     }
@@ -94,8 +94,8 @@ struct AlbumView: View {
                             .bold()
                             .frame(width: Constant.Layout.largeTextSize, alignment: .trailing)
                         Text(Constant.Karlo.convertImageSizeString(
-                            width: viewStore.imageConfiguration.width,
-                            height: viewStore.imageConfiguration.height)
+                            width: viewStore.imageConfigurationRequest.width,
+                            height: viewStore.imageConfigurationRequest.height)
                         )
                             .font(.body)
                         Spacer()
@@ -128,7 +128,7 @@ struct AlbumView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             AlbumView(
-                store: .init(initialState: AlbumFeature.State(imageConfiguration: SampleData.sampleImageInfo)) {
+                store: .init(initialState: AlbumFeature.State(imageConfigurationRequest: SampleData.sampleImageInfo)) {
                     AlbumFeature()
                 }
             )

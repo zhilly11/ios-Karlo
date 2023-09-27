@@ -4,14 +4,16 @@
 import Foundation
 
 struct SampleData {
-    static let sampleImageInfo = ImageConfiguration(prompt: "Pepe the frog playing valorant, headset, RGB Gaiming, 4k",
-                                                    negativePrompt: "object out of frame, out of frame, body out of frame",
-                                                    width: 512,
-                                                    height: 512,
-                                                    upscale: false,
-                                                    scale: 2,
-                                                    imageQuality: 70,
-                                                    imageCount: 1)
+    static let sampleImageInfo = ImageConfigurationRequest(
+        prompt: "Pepe the frog playing valorant, headset, RGB Gaiming, 4k",
+        negativePrompt: "object out of frame, out of frame, body out of frame",
+        width: 512,
+        height: 512,
+        upscale: false,
+        scale: 2,
+        imageQuality: 70,
+        imageCount: 1
+    )
     
     static let sampleImageData: [String] = [loadImageData(), loadImageData()]
     
