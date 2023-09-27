@@ -33,3 +33,7 @@ enum HTTPHeader {
     }
 }
 
+enum EndPoint: String {
+    case generation = "t2i"
+    case transformation = "variations"
+}

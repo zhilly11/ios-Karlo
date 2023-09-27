@@ -33,7 +33,7 @@ struct AlbumFeature: Reducer {
                     await send(.setProceeding(true))
                     await send(.imageResponse(
                         TaskResult { try await
-                            apiService.generateImage(info: info)
+                            apiService.request(data: info)
                         })
                     )
                     await send(.setProceeding(false))

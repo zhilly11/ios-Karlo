@@ -13,10 +13,20 @@ struct KarloAPI {
     /// KarolAPI에게 Image 생성을 요청하는 method 입니다.
     /// 매개변수에 이미지 생성 조건을 전달해 요청합니다.
     /// Image의 Data를 배열에 담아 return 합니다.
-    func generateImage(info imageConfigurationRequest: ImageConfigurationRequest) async throws -> [Data] {
+    func request<T: Encodable>(data: T) async throws -> [Data] {
         let encoder: JSONEncoder = .init()
-        let jsonData: Data = try encoder.encode(imageConfigurationRequest)
-        var request: URLRequest = try configureRequest()
+        let jsonData: Data = try encoder.encode(data)
+        var endPoint: EndPoint
+        
+        if data is ImageConfigurationRequest {
+            endPoint = .generation
+        } else if data is ImageTransformationRequest {
+            endPoint = .transformation
+        } else {
+            throw NetworkError.unsupportedData
+        }
+        
+        var request: URLRequest = try configureRequest(endPoint: endPoint)
         
         request.httpBody = jsonData
         
@@ -28,6 +38,34 @@ struct KarloAPI {
             throw NetworkError.invalidServerResponse
         }
         
+        return try decodeResponse(data: data)
+    }
+}
+
+extension KarloAPI {
+    private func configureRequest(endPoint: EndPoint) throws -> URLRequest {
+        guard let apiKey: String = Bundle.main.apiKey else {
+            throw NetworkError.fetchFailAPIKey
+        }
+        
+        guard let baseURL: URL = URL.makeForEndpoint(endpoint: endPoint.rawValue) else {
+            throw NetworkError.invalidURL
+        }
+        
+        var request: URLRequest = .init(url: baseURL)
+        
+        request.httpMethod = HTTPMethod.post.rawValue
+        
+        let authorizationHeader: HTTPHeader = .authorization(key: apiKey)
+        let contentTypeHeader: HTTPHeader = .contentType
+        
+        request.setupHeader(authorizationHeader)
+        request.setupHeader(contentTypeHeader)
+        
+        return request
+    }
+    
+    private func decodeResponse(data: Data) throws -> [Data] {
         let decoder: JSONDecoder = .init()
         let responseData = try decoder.decode(KarloResponse.self, from: data)
         var result: [Data] = .init()
@@ -39,28 +77,5 @@ struct KarloAPI {
         }
         
         return result
-    }
-}
-
-extension KarloAPI {
-    private func configureRequest() throws -> URLRequest {
-        guard let apiKey: String = Bundle.main.apiKey else {
-            throw NetworkError.fetchFailAPIKey
-        }
-        
-        guard let baseURL: URL = URL.makeForEndpoint() else {
-            throw NetworkError.invalidURL
-        }
-        
-        var request: URLRequest = .init(url: baseURL)
-        
-        request.httpMethod = HTTPMethod.post.rawValue
-        let authorizationHeader: HTTPHeader = .authorization(key: apiKey)
-        let contentTypeHeader: HTTPHeader = .contentType
-        
-        request.setupHeader(authorizationHeader)
-        request.setupHeader(contentTypeHeader)
-        
-        return request
     }
 }

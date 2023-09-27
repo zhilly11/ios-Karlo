@@ -4,9 +4,9 @@
 import Foundation
 
 extension URL {
-    static let baseURL: String = "https://api.kakaobrain.com/v2/inference/karlo/t2i"
+    static let baseURL: String = "https://api.kakaobrain.com/v2/inference/karlo/"
     
-    static func makeForEndpoint(_ endpoint: String = .init()) -> URL? {
+    static func makeForEndpoint(endpoint: String = .init()) -> URL? {
         return URL(string: baseURL + endpoint)
     }
 }
