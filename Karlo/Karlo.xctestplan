@@ -1,0 +1,47 @@
+{
+  "configurations" : [
+    {
+      "id" : "1A6644D7-8CCC-4DD5-9C19-A6C107D35FFE",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Karlo.xcodeproj",
+          "identifier" : "B402D4632AC46C1D0086E43C",
+          "name" : "Karlo"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Karlo.xcodeproj",
+      "identifier" : "B402D4632AC46C1D0086E43C",
+      "name" : "Karlo"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Karlo.xcodeproj",
+        "identifier" : "B402D4732AC46C1E0086E43C",
+        "name" : "KarloTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Karlo.xcodeproj",
+        "identifier" : "B402D47D2AC46C1E0086E43C",
+        "name" : "KarloUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

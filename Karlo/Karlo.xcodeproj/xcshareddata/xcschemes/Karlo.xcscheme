@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4C6E8792A9C70BC00137072"
+               BlueprintIdentifier = "B402D4632AC46C1D0086E43C"
                BuildableName = "Karlo.app"
                BlueprintName = "Karlo"
-               ReferencedContainer = "container:Karlo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4091E602AC42E5500F2957A"
-               BuildableName = "KarloTests.xctest"
-               BlueprintName = "KarloTests"
                ReferencedContainer = "container:Karlo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,15 +26,20 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:Karlo.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
       <Testables>
          <TestableReference
             skipped = "NO"
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4091E602AC42E5500F2957A"
+               BlueprintIdentifier = "B402D4732AC46C1E0086E43C"
                BuildableName = "KarloTests.xctest"
                BlueprintName = "KarloTests"
                ReferencedContainer = "container:Karlo.xcodeproj">
@@ -59,7 +50,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4C6E8932A9C70BD00137072"
+               BlueprintIdentifier = "B402D47D2AC46C1E0086E43C"
                BuildableName = "KarloUITests.xctest"
                BlueprintName = "KarloUITests"
                ReferencedContainer = "container:Karlo.xcodeproj">
@@ -81,7 +72,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B4C6E8792A9C70BC00137072"
+            BlueprintIdentifier = "B402D4632AC46C1D0086E43C"
             BuildableName = "Karlo.app"
             BlueprintName = "Karlo"
             ReferencedContainer = "container:Karlo.xcodeproj">
@@ -98,7 +89,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B4C6E8792A9C70BC00137072"
+            BlueprintIdentifier = "B402D4632AC46C1D0086E43C"
             BuildableName = "Karlo.app"
             BlueprintName = "Karlo"
             ReferencedContainer = "container:Karlo.xcodeproj">
