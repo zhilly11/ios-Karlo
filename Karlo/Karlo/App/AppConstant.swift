@@ -70,6 +70,8 @@ enum Constant {
         static let imageQualityMaximum: Double = 100
         static let imageUpscale: Bool = false
         static let imageScale: Bool = false
+        static var imageScaleTwice: Int = 2
+        static let imageScaleQuadruple: Int = 4
         static let imageCount: Int = 1
         static let promptMaxSize: Int = 256
         

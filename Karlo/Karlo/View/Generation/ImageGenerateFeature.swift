@@ -29,10 +29,7 @@ struct ImageGenerateFeature: Reducer {
         case imageScaleToggle(isOn: Bool)
         case imageQualityChanged(Double)
         case imageCountChanged(Int)
-        
         case setSheet(isPresented: Bool)
-        
-        case export
     }
     
     var body: some Reducer<State, Action> {
@@ -92,7 +89,7 @@ extension ImageGenerateFeature {
             width: state.imageWidth,
             height: state.imageHeight,
             upscale: state.imageUpscale,
-            scale: state.imageScale == false ? 2 : 4,
+            scale: state.imageScale == false ? Constant.Karlo.imageScaleTwice : Constant.Karlo.imageScaleQuadruple,
             imageQuality: Int(state.imageQuality),
             imageCount: state.imageCount
         )
