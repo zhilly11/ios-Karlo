@@ -7,303 +7,317 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4091E642AC42E5600F2957A /* KarloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4091E632AC42E5600F2957A /* KarloTests.swift */; };
-		B4091E702AC4323A00F2957A /* ImageTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4091E6D2AC4323A00F2957A /* ImageTransformation.swift */; };
-		B4091E712AC4323A00F2957A /* ImageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4091E6E2AC4323A00F2957A /* ImageConfiguration.swift */; };
-		B4091E722AC4323A00F2957A /* KarloResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4091E6F2AC4323A00F2957A /* KarloResponse.swift */; };
-		B4091E742AC432B400F2957A /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4091E732AC432B400F2957A /* Secret.plist */; };
-		B40D50B72AB18E9C00006F74 /* ImageGenerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D50B62AB18E9C00006F74 /* ImageGenerateView.swift */; };
-		B40D50BB2AB18FA400006F74 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D50BA2AB18FA400006F74 /* RootView.swift */; };
-		B40D50BE2AB199A200006F74 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D50BD2AB199A200006F74 /* Root.swift */; };
-		B40D50C02AB199CD00006F74 /* ImageGenerateFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D50BF2AB199CD00006F74 /* ImageGenerateFeature.swift */; };
-		B40D50C22AB250B800006F74 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40D50C12AB250B800006F74 /* AppConstant.swift */; };
-		B416EB902AB028E50065E33A /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416EB8F2AB028E50065E33A /* APIConstant.swift */; };
-		B416EB922AB06EA60065E33A /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416EB912AB06EA60065E33A /* URL+.swift */; };
-		B416EB942AB070060065E33A /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416EB932AB070060065E33A /* Bundle+.swift */; };
-		B416EB962AB079020065E33A /* URLRequest+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416EB952AB079020065E33A /* URLRequest+.swift */; };
-		B416EB992AB0D7460065E33A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B416EB982AB0D7460065E33A /* ComposableArchitecture */; };
-		B416EB9C2AB0D9DC0065E33A /* AlbumFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416EB9B2AB0D9DC0065E33A /* AlbumFeature.swift */; };
-		B4182CAB2AA8994400F85B91 /* KarloAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4182CAA2AA8994400F85B91 /* KarloAPIService.swift */; };
-		B4182CB02AA8AB8E00F85B91 /* KeywordTagFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4182CAF2AA8AB8E00F85B91 /* KeywordTagFeature.swift */; };
-		B4182CB22AA8AC5A00F85B91 /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4182CB12AA8AC5A00F85B91 /* UIScreen+.swift */; };
-		B4182CB42AA8BBA100F85B91 /* KeywordTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4182CB32AA8BBA100F85B91 /* KeywordTag.swift */; };
-		B4182CB82AA973A000F85B91 /* KeywordTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4182CB72AA973A000F85B91 /* KeywordTagView.swift */; };
-		B4182CBA2AA9757100F85B91 /* KeywordInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4182CB92AA9757100F85B91 /* KeywordInputView.swift */; };
-		B4182CBC2AA98BCC00F85B91 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4182CBB2AA98BCC00F85B91 /* AlbumView.swift */; };
-		B4182CC02AA9C75500F85B91 /* SampleImageData.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4182CBF2AA9C75500F85B91 /* SampleImageData.txt */; };
-		B4182CC22AA9C85C00F85B91 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4182CC12AA9C85C00F85B91 /* NetworkError.swift */; };
-		B4182CC42AA9C8A600F85B91 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4182CC32AA9C8A600F85B91 /* SampleData.swift */; };
-		B4845FAC2AB860EF00BDBE12 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845FAB2AB860EF00BDBE12 /* ImageManager.swift */; };
-		B4845FAE2ABACEC800BDBE12 /* ImageSaveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4845FAD2ABACEC800BDBE12 /* ImageSaveError.swift */; };
-		B4C6E87E2A9C70BC00137072 /* KarloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C6E87D2A9C70BC00137072 /* KarloApp.swift */; };
-		B4C6E8822A9C70BD00137072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C6E8812A9C70BD00137072 /* Assets.xcassets */; };
-		B4C6E8852A9C70BD00137072 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C6E8842A9C70BD00137072 /* Preview Assets.xcassets */; };
-		B4CB79542AA8838B0099DD1D /* KeywordError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CB79532AA8838B0099DD1D /* KeywordError.swift */; };
-		B4CB79572AA883AD0099DD1D /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CB79562AA883AD0099DD1D /* String+.swift */; };
+		B402D4832AC46C1E0086E43C /* KarloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4822AC46C1E0086E43C /* KarloUITests.swift */; };
+		B402D4852AC46C1E0086E43C /* KarloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4842AC46C1E0086E43C /* KarloUITestsLaunchTests.swift */; };
+		B402D4BE2AC46D950086E43C /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4932AC46D930086E43C /* APIConstant.swift */; };
+		B402D4BF2AC46D950086E43C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4942AC46D930086E43C /* SampleData.swift */; };
+		B402D4C02AC46D950086E43C /* KarloAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4952AC46D930086E43C /* KarloAPIService.swift */; };
+		B402D4C22AC46D950086E43C /* KarloResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4992AC46D930086E43C /* KarloResponse.swift */; };
+		B402D4C32AC46D950086E43C /* ImageTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D49A2AC46D930086E43C /* ImageTransformation.swift */; };
+		B402D4C42AC46D950086E43C /* ImageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D49B2AC46D930086E43C /* ImageConfiguration.swift */; };
+		B402D4C52AC46D950086E43C /* ImageSaveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D49D2AC46D930086E43C /* ImageSaveError.swift */; };
+		B402D4C62AC46D950086E43C /* KeywordError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D49E2AC46D930086E43C /* KeywordError.swift */; };
+		B402D4C72AC46D950086E43C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D49F2AC46D930086E43C /* NetworkError.swift */; };
+		B402D4C82AC46D950086E43C /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4A12AC46D940086E43C /* AppConstant.swift */; };
+		B402D4C92AC46D950086E43C /* KarloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4A22AC46D940086E43C /* KarloApp.swift */; };
+		B402D4CA2AC46D950086E43C /* SampleImageData.txt in Resources */ = {isa = PBXBuildFile; fileRef = B402D4A42AC46D940086E43C /* SampleImageData.txt */; };
+		B402D4CB2AC46D950086E43C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B402D4A52AC46D940086E43C /* Assets.xcassets */; };
+		B402D4CC2AC46D950086E43C /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = B402D4A62AC46D940086E43C /* Secret.plist */; };
+		B402D4CD2AC46D950086E43C /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4A82AC46D940086E43C /* ImageManager.swift */; };
+		B402D4CE2AC46D950086E43C /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4AA2AC46D940086E43C /* String+.swift */; };
+		B402D4CF2AC46D950086E43C /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4AB2AC46D940086E43C /* URL+.swift */; };
+		B402D4D02AC46D950086E43C /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4AC2AC46D940086E43C /* Bundle+.swift */; };
+		B402D4D12AC46D950086E43C /* URLRequest+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4AD2AC46D940086E43C /* URLRequest+.swift */; };
+		B402D4D22AC46D950086E43C /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4AE2AC46D940086E43C /* UIScreen+.swift */; };
+		B402D4D32AC46D950086E43C /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4B12AC46D940086E43C /* Root.swift */; };
+		B402D4D42AC46D950086E43C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4B22AC46D940086E43C /* RootView.swift */; };
+		B402D4D52AC46D950086E43C /* AlbumFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4B42AC46D940086E43C /* AlbumFeature.swift */; };
+		B402D4D62AC46D950086E43C /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4B52AC46D940086E43C /* AlbumView.swift */; };
+		B402D4D72AC46D950086E43C /* ImageGenerateFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4B72AC46D940086E43C /* ImageGenerateFeature.swift */; };
+		B402D4D82AC46D950086E43C /* KeywordTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4B92AC46D940086E43C /* KeywordTag.swift */; };
+		B402D4D92AC46D950086E43C /* KeywordInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4BA2AC46D940086E43C /* KeywordInputView.swift */; };
+		B402D4DA2AC46D950086E43C /* KeywordTagFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4BB2AC46D940086E43C /* KeywordTagFeature.swift */; };
+		B402D4DB2AC46D950086E43C /* KeywordTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4BC2AC46D940086E43C /* KeywordTagView.swift */; };
+		B402D4DC2AC46D950086E43C /* ImageGenerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402D4BD2AC46D940086E43C /* ImageGenerateView.swift */; };
+		B42067F12AC46DD2004A3BEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42067F02AC46DD2004A3BEB /* Preview Assets.xcassets */; };
+		B42067F42AC46DF5004A3BEB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B42067F32AC46DF5004A3BEB /* ComposableArchitecture */; };
+		B42067F62AC46F58004A3BEB /* ImageGenerationFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B4091E652AC42E5600F2957A /* PBXContainerItemProxy */ = {
+		B402D4752AC46C1E0086E43C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B4C6E8722A9C70BC00137072 /* Project object */;
+			containerPortal = B402D45C2AC46C1D0086E43C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B4C6E8792A9C70BC00137072;
+			remoteGlobalIDString = B402D4632AC46C1D0086E43C;
+			remoteInfo = Karlo;
+		};
+		B402D47F2AC46C1E0086E43C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B402D45C2AC46C1D0086E43C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B402D4632AC46C1D0086E43C;
 			remoteInfo = Karlo;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B4091E612AC42E5500F2957A /* KarloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KarloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4091E632AC42E5600F2957A /* KarloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarloTests.swift; sourceTree = "<group>"; };
-		B4091E6D2AC4323A00F2957A /* ImageTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransformation.swift; sourceTree = "<group>"; };
-		B4091E6E2AC4323A00F2957A /* ImageConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConfiguration.swift; sourceTree = "<group>"; };
-		B4091E6F2AC4323A00F2957A /* KarloResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarloResponse.swift; sourceTree = "<group>"; };
-		B4091E732AC432B400F2957A /* Secret.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
-		B40D50B62AB18E9C00006F74 /* ImageGenerateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerateView.swift; sourceTree = "<group>"; };
-		B40D50BA2AB18FA400006F74 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		B40D50BD2AB199A200006F74 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
-		B40D50BF2AB199CD00006F74 /* ImageGenerateFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerateFeature.swift; sourceTree = "<group>"; };
-		B40D50C12AB250B800006F74 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
-		B416EB8F2AB028E50065E33A /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
-		B416EB912AB06EA60065E33A /* URL+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
-		B416EB932AB070060065E33A /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
-		B416EB952AB079020065E33A /* URLRequest+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+.swift"; sourceTree = "<group>"; };
-		B416EB9B2AB0D9DC0065E33A /* AlbumFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumFeature.swift; sourceTree = "<group>"; };
-		B4182CAA2AA8994400F85B91 /* KarloAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarloAPIService.swift; sourceTree = "<group>"; };
-		B4182CAF2AA8AB8E00F85B91 /* KeywordTagFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTagFeature.swift; sourceTree = "<group>"; };
-		B4182CB12AA8AC5A00F85B91 /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
-		B4182CB32AA8BBA100F85B91 /* KeywordTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTag.swift; sourceTree = "<group>"; };
-		B4182CB72AA973A000F85B91 /* KeywordTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTagView.swift; sourceTree = "<group>"; };
-		B4182CB92AA9757100F85B91 /* KeywordInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordInputView.swift; sourceTree = "<group>"; };
-		B4182CBB2AA98BCC00F85B91 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
-		B4182CBF2AA9C75500F85B91 /* SampleImageData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleImageData.txt; sourceTree = "<group>"; };
-		B4182CC12AA9C85C00F85B91 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		B4182CC32AA9C8A600F85B91 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
-		B4845FAB2AB860EF00BDBE12 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
-		B4845FAD2ABACEC800BDBE12 /* ImageSaveError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaveError.swift; sourceTree = "<group>"; };
-		B4C6E87A2A9C70BC00137072 /* Karlo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karlo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4C6E87D2A9C70BC00137072 /* KarloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarloApp.swift; sourceTree = "<group>"; };
-		B4C6E8812A9C70BD00137072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B4C6E8842A9C70BD00137072 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B4CB79532AA8838B0099DD1D /* KeywordError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordError.swift; sourceTree = "<group>"; };
-		B4CB79562AA883AD0099DD1D /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		B402D4642AC46C1D0086E43C /* Karlo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karlo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B402D4742AC46C1E0086E43C /* KarloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KarloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B402D47E2AC46C1E0086E43C /* KarloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KarloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B402D4822AC46C1E0086E43C /* KarloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarloUITests.swift; sourceTree = "<group>"; };
+		B402D4842AC46C1E0086E43C /* KarloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarloUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B402D4912AC46C400086E43C /* Karlo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Karlo.xctestplan; sourceTree = "<group>"; };
+		B402D4932AC46D930086E43C /* APIConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		B402D4942AC46D930086E43C /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		B402D4952AC46D930086E43C /* KarloAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarloAPIService.swift; sourceTree = "<group>"; };
+		B402D4992AC46D930086E43C /* KarloResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarloResponse.swift; sourceTree = "<group>"; };
+		B402D49A2AC46D930086E43C /* ImageTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransformation.swift; sourceTree = "<group>"; };
+		B402D49B2AC46D930086E43C /* ImageConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConfiguration.swift; sourceTree = "<group>"; };
+		B402D49D2AC46D930086E43C /* ImageSaveError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSaveError.swift; sourceTree = "<group>"; };
+		B402D49E2AC46D930086E43C /* KeywordError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordError.swift; sourceTree = "<group>"; };
+		B402D49F2AC46D930086E43C /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B402D4A12AC46D940086E43C /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		B402D4A22AC46D940086E43C /* KarloApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarloApp.swift; sourceTree = "<group>"; };
+		B402D4A42AC46D940086E43C /* SampleImageData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleImageData.txt; sourceTree = "<group>"; };
+		B402D4A52AC46D940086E43C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B402D4A62AC46D940086E43C /* Secret.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
+		B402D4A82AC46D940086E43C /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		B402D4AA2AC46D940086E43C /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		B402D4AB2AC46D940086E43C /* URL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
+		B402D4AC2AC46D940086E43C /* Bundle+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
+		B402D4AD2AC46D940086E43C /* URLRequest+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+.swift"; sourceTree = "<group>"; };
+		B402D4AE2AC46D940086E43C /* UIScreen+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
+		B402D4B12AC46D940086E43C /* Root.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
+		B402D4B22AC46D940086E43C /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B402D4B42AC46D940086E43C /* AlbumFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumFeature.swift; sourceTree = "<group>"; };
+		B402D4B52AC46D940086E43C /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		B402D4B72AC46D940086E43C /* ImageGenerateFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerateFeature.swift; sourceTree = "<group>"; };
+		B402D4B92AC46D940086E43C /* KeywordTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordTag.swift; sourceTree = "<group>"; };
+		B402D4BA2AC46D940086E43C /* KeywordInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordInputView.swift; sourceTree = "<group>"; };
+		B402D4BB2AC46D940086E43C /* KeywordTagFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordTagFeature.swift; sourceTree = "<group>"; };
+		B402D4BC2AC46D940086E43C /* KeywordTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordTagView.swift; sourceTree = "<group>"; };
+		B402D4BD2AC46D940086E43C /* ImageGenerateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerateView.swift; sourceTree = "<group>"; };
+		B42067F02AC46DD2004A3BEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationFeatureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B4091E5E2AC42E5500F2957A /* Frameworks */ = {
+		B402D4612AC46C1D0086E43C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42067F42AC46DF5004A3BEB /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B402D4712AC46C1E0086E43C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4C6E8772A9C70BC00137072 /* Frameworks */ = {
+		B402D47B2AC46C1E0086E43C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B416EB992AB0D7460065E33A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B4091E622AC42E5600F2957A /* KarloTests */ = {
+		B402D45B2AC46C1D0086E43C = {
 			isa = PBXGroup;
 			children = (
-				B4091E632AC42E5600F2957A /* KarloTests.swift */,
-			);
-			path = KarloTests;
-			sourceTree = "<group>";
-		};
-		B40D50B82AB18EA000006F74 /* Generation */ = {
-			isa = PBXGroup;
-			children = (
-				B40D50B92AB18EBC00006F74 /* KeywordTag */,
-				B40D50BF2AB199CD00006F74 /* ImageGenerateFeature.swift */,
-				B40D50B62AB18E9C00006F74 /* ImageGenerateView.swift */,
-			);
-			path = Generation;
-			sourceTree = "<group>";
-		};
-		B40D50B92AB18EBC00006F74 /* KeywordTag */ = {
-			isa = PBXGroup;
-			children = (
-				B4182CB92AA9757100F85B91 /* KeywordInputView.swift */,
-				B4182CB72AA973A000F85B91 /* KeywordTagView.swift */,
-				B4182CAF2AA8AB8E00F85B91 /* KeywordTagFeature.swift */,
-				B4182CB32AA8BBA100F85B91 /* KeywordTag.swift */,
-			);
-			path = KeywordTag;
-			sourceTree = "<group>";
-		};
-		B40D50BC2AB1999100006F74 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				B40D50BD2AB199A200006F74 /* Root.swift */,
-				B40D50BA2AB18FA400006F74 /* RootView.swift */,
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
-		B416EB9A2AB0D9C10065E33A /* Album */ = {
-			isa = PBXGroup;
-			children = (
-				B416EB9B2AB0D9DC0065E33A /* AlbumFeature.swift */,
-				B4182CBB2AA98BCC00F85B91 /* AlbumView.swift */,
-			);
-			path = Album;
-			sourceTree = "<group>";
-		};
-		B4182CA92AA8993500F85B91 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				B4182CAA2AA8994400F85B91 /* KarloAPIService.swift */,
-				B4182CC32AA9C8A600F85B91 /* SampleData.swift */,
-				B416EB8F2AB028E50065E33A /* APIConstant.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		B4182CAC2AA89F5800F85B91 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B4091E6E2AC4323A00F2957A /* ImageConfiguration.swift */,
-				B4091E6D2AC4323A00F2957A /* ImageTransformation.swift */,
-				B4091E6F2AC4323A00F2957A /* KarloResponse.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B4845FAA2AB860E400BDBE12 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				B4845FAB2AB860EF00BDBE12 /* ImageManager.swift */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
-		B4C6E8712A9C70BC00137072 = {
-			isa = PBXGroup;
-			children = (
-				B4C6E87C2A9C70BC00137072 /* Karlo */,
-				B4091E622AC42E5600F2957A /* KarloTests */,
-				B4C6E87B2A9C70BC00137072 /* Products */,
+				B402D4912AC46C400086E43C /* Karlo.xctestplan */,
+				B402D4662AC46C1D0086E43C /* Karlo */,
+				B402D4772AC46C1E0086E43C /* KarloTests */,
+				B402D4812AC46C1E0086E43C /* KarloUITests */,
+				B402D4652AC46C1D0086E43C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B4C6E87B2A9C70BC00137072 /* Products */ = {
+		B402D4652AC46C1D0086E43C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B4C6E87A2A9C70BC00137072 /* Karlo.app */,
-				B4091E612AC42E5500F2957A /* KarloTests.xctest */,
+				B402D4642AC46C1D0086E43C /* Karlo.app */,
+				B402D4742AC46C1E0086E43C /* KarloTests.xctest */,
+				B402D47E2AC46C1E0086E43C /* KarloUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B4C6E87C2A9C70BC00137072 /* Karlo */ = {
+		B402D4662AC46C1D0086E43C /* Karlo */ = {
 			isa = PBXGroup;
 			children = (
-				B4C6E8A72A9C70D900137072 /* App */,
-				B4C6E8A82A9C70DF00137072 /* View */,
-				B4182CAC2AA89F5800F85B91 /* Model */,
-				B4182CA92AA8993500F85B91 /* Network */,
-				B4845FAA2AB860E400BDBE12 /* Util */,
-				B4CB79552AA8839D0099DD1D /* Extension */,
-				B4CB79522AA8837D0099DD1D /* Error */,
-				B4C6E8A92A9C70E400137072 /* Resource */,
-				B4C6E8832A9C70BD00137072 /* Preview Content */,
+				B402D4A02AC46D940086E43C /* App */,
+				B402D4AF2AC46D940086E43C /* View */,
+				B402D4982AC46D930086E43C /* Model */,
+				B402D4922AC46D930086E43C /* Network */,
+				B402D49C2AC46D930086E43C /* Error */,
+				B402D4A92AC46D940086E43C /* Extension */,
+				B402D4A72AC46D940086E43C /* Util */,
+				B402D4962AC46D930086E43C /* Preview Content */,
+				B402D4A32AC46D940086E43C /* Resource */,
 			);
 			path = Karlo;
 			sourceTree = "<group>";
 		};
-		B4C6E8832A9C70BD00137072 /* Preview Content */ = {
+		B402D4772AC46C1E0086E43C /* KarloTests */ = {
 			isa = PBXGroup;
 			children = (
-				B4C6E8842A9C70BD00137072 /* Preview Assets.xcassets */,
+				B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */,
+			);
+			path = KarloTests;
+			sourceTree = "<group>";
+		};
+		B402D4812AC46C1E0086E43C /* KarloUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B402D4822AC46C1E0086E43C /* KarloUITests.swift */,
+				B402D4842AC46C1E0086E43C /* KarloUITestsLaunchTests.swift */,
+			);
+			path = KarloUITests;
+			sourceTree = "<group>";
+		};
+		B402D4922AC46D930086E43C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B402D4932AC46D930086E43C /* APIConstant.swift */,
+				B402D4942AC46D930086E43C /* SampleData.swift */,
+				B402D4952AC46D930086E43C /* KarloAPIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B402D4962AC46D930086E43C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B42067F02AC46DD2004A3BEB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B4C6E8A72A9C70D900137072 /* App */ = {
+		B402D4982AC46D930086E43C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B4C6E87D2A9C70BC00137072 /* KarloApp.swift */,
-				B40D50C12AB250B800006F74 /* AppConstant.swift */,
+				B402D4992AC46D930086E43C /* KarloResponse.swift */,
+				B402D49A2AC46D930086E43C /* ImageTransformation.swift */,
+				B402D49B2AC46D930086E43C /* ImageConfiguration.swift */,
 			);
-			path = App;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		B4C6E8A82A9C70DF00137072 /* View */ = {
+		B402D49C2AC46D930086E43C /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				B40D50BC2AB1999100006F74 /* Root */,
-				B40D50B82AB18EA000006F74 /* Generation */,
-				B416EB9A2AB0D9C10065E33A /* Album */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B4C6E8A92A9C70E400137072 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				B4091E732AC432B400F2957A /* Secret.plist */,
-				B4182CBF2AA9C75500F85B91 /* SampleImageData.txt */,
-				B4C6E8812A9C70BD00137072 /* Assets.xcassets */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		B4CB79522AA8837D0099DD1D /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				B4CB79532AA8838B0099DD1D /* KeywordError.swift */,
-				B4182CC12AA9C85C00F85B91 /* NetworkError.swift */,
-				B4845FAD2ABACEC800BDBE12 /* ImageSaveError.swift */,
+				B402D49D2AC46D930086E43C /* ImageSaveError.swift */,
+				B402D49E2AC46D930086E43C /* KeywordError.swift */,
+				B402D49F2AC46D930086E43C /* NetworkError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
 		};
-		B4CB79552AA8839D0099DD1D /* Extension */ = {
+		B402D4A02AC46D940086E43C /* App */ = {
 			isa = PBXGroup;
 			children = (
-				B4CB79562AA883AD0099DD1D /* String+.swift */,
-				B4182CB12AA8AC5A00F85B91 /* UIScreen+.swift */,
-				B416EB912AB06EA60065E33A /* URL+.swift */,
-				B416EB932AB070060065E33A /* Bundle+.swift */,
-				B416EB952AB079020065E33A /* URLRequest+.swift */,
+				B402D4A12AC46D940086E43C /* AppConstant.swift */,
+				B402D4A22AC46D940086E43C /* KarloApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B402D4A32AC46D940086E43C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B402D4A42AC46D940086E43C /* SampleImageData.txt */,
+				B402D4A52AC46D940086E43C /* Assets.xcassets */,
+				B402D4A62AC46D940086E43C /* Secret.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B402D4A72AC46D940086E43C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B402D4A82AC46D940086E43C /* ImageManager.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		B402D4A92AC46D940086E43C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B402D4AA2AC46D940086E43C /* String+.swift */,
+				B402D4AB2AC46D940086E43C /* URL+.swift */,
+				B402D4AC2AC46D940086E43C /* Bundle+.swift */,
+				B402D4AD2AC46D940086E43C /* URLRequest+.swift */,
+				B402D4AE2AC46D940086E43C /* UIScreen+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B402D4AF2AC46D940086E43C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B402D4B02AC46D940086E43C /* Root */,
+				B402D4B32AC46D940086E43C /* Album */,
+				B402D4B62AC46D940086E43C /* Generation */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B402D4B02AC46D940086E43C /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				B402D4B12AC46D940086E43C /* Root.swift */,
+				B402D4B22AC46D940086E43C /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		B402D4B32AC46D940086E43C /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				B402D4B42AC46D940086E43C /* AlbumFeature.swift */,
+				B402D4B52AC46D940086E43C /* AlbumView.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		B402D4B62AC46D940086E43C /* Generation */ = {
+			isa = PBXGroup;
+			children = (
+				B402D4B82AC46D940086E43C /* KeywordTag */,
+				B402D4B72AC46D940086E43C /* ImageGenerateFeature.swift */,
+				B402D4BD2AC46D940086E43C /* ImageGenerateView.swift */,
+			);
+			path = Generation;
+			sourceTree = "<group>";
+		};
+		B402D4B82AC46D940086E43C /* KeywordTag */ = {
+			isa = PBXGroup;
+			children = (
+				B402D4B92AC46D940086E43C /* KeywordTag.swift */,
+				B402D4BA2AC46D940086E43C /* KeywordInputView.swift */,
+				B402D4BB2AC46D940086E43C /* KeywordTagFeature.swift */,
+				B402D4BC2AC46D940086E43C /* KeywordTagView.swift */,
+			);
+			path = KeywordTag;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B4091E602AC42E5500F2957A /* KarloTests */ = {
+		B402D4632AC46C1D0086E43C /* Karlo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4091E672AC42E5600F2957A /* Build configuration list for PBXNativeTarget "KarloTests" */;
+			buildConfigurationList = B402D4882AC46C1E0086E43C /* Build configuration list for PBXNativeTarget "Karlo" */;
 			buildPhases = (
-				B4091E5D2AC42E5500F2957A /* Sources */,
-				B4091E5E2AC42E5500F2957A /* Frameworks */,
-				B4091E5F2AC42E5500F2957A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B4091E662AC42E5600F2957A /* PBXTargetDependency */,
-			);
-			name = KarloTests;
-			productName = KarloTests;
-			productReference = B4091E612AC42E5500F2957A /* KarloTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B4C6E8792A9C70BC00137072 /* Karlo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B4C6E89E2A9C70BD00137072 /* Build configuration list for PBXNativeTarget "Karlo" */;
-			buildPhases = (
-				B4C6E8762A9C70BC00137072 /* Sources */,
-				B4C6E8772A9C70BC00137072 /* Frameworks */,
-				B4C6E8782A9C70BC00137072 /* Resources */,
+				B402D4602AC46C1D0086E43C /* Sources */,
+				B402D4612AC46C1D0086E43C /* Frameworks */,
+				B402D4622AC46C1D0086E43C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -311,32 +325,72 @@
 			);
 			name = Karlo;
 			packageProductDependencies = (
-				B416EB982AB0D7460065E33A /* ComposableArchitecture */,
+				B42067F32AC46DF5004A3BEB /* ComposableArchitecture */,
 			);
 			productName = Karlo;
-			productReference = B4C6E87A2A9C70BC00137072 /* Karlo.app */;
+			productReference = B402D4642AC46C1D0086E43C /* Karlo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B402D4732AC46C1E0086E43C /* KarloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B402D48B2AC46C1E0086E43C /* Build configuration list for PBXNativeTarget "KarloTests" */;
+			buildPhases = (
+				B402D4702AC46C1E0086E43C /* Sources */,
+				B402D4712AC46C1E0086E43C /* Frameworks */,
+				B402D4722AC46C1E0086E43C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B402D4762AC46C1E0086E43C /* PBXTargetDependency */,
+			);
+			name = KarloTests;
+			productName = KarloTests;
+			productReference = B402D4742AC46C1E0086E43C /* KarloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B402D47D2AC46C1E0086E43C /* KarloUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B402D48E2AC46C1E0086E43C /* Build configuration list for PBXNativeTarget "KarloUITests" */;
+			buildPhases = (
+				B402D47A2AC46C1E0086E43C /* Sources */,
+				B402D47B2AC46C1E0086E43C /* Frameworks */,
+				B402D47C2AC46C1E0086E43C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B402D4802AC46C1E0086E43C /* PBXTargetDependency */,
+			);
+			name = KarloUITests;
+			productName = KarloUITests;
+			productReference = B402D47E2AC46C1E0086E43C /* KarloUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B4C6E8722A9C70BC00137072 /* Project object */ = {
+		B402D45C2AC46C1D0086E43C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					B4091E602AC42E5500F2957A = {
+					B402D4632AC46C1D0086E43C = {
 						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = B4C6E8792A9C70BC00137072;
 					};
-					B4C6E8792A9C70BC00137072 = {
+					B402D4732AC46C1E0086E43C = {
 						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B402D4632AC46C1D0086E43C;
+					};
+					B402D47D2AC46C1E0086E43C = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B402D4632AC46C1D0086E43C;
 					};
 				};
 			};
-			buildConfigurationList = B4C6E8752A9C70BC00137072 /* Build configuration list for PBXProject "Karlo" */;
+			buildConfigurationList = B402D45F2AC46C1D0086E43C /* Build configuration list for PBXProject "Karlo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -344,140 +398,118 @@
 				en,
 				Base,
 			);
-			mainGroup = B4C6E8712A9C70BC00137072;
+			mainGroup = B402D45B2AC46C1D0086E43C;
 			packageReferences = (
-				B416EB972AB0D7460065E33A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				B42067F22AC46DF5004A3BEB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
-			productRefGroup = B4C6E87B2A9C70BC00137072 /* Products */;
+			productRefGroup = B402D4652AC46C1D0086E43C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B4C6E8792A9C70BC00137072 /* Karlo */,
-				B4091E602AC42E5500F2957A /* KarloTests */,
+				B402D4632AC46C1D0086E43C /* Karlo */,
+				B402D4732AC46C1E0086E43C /* KarloTests */,
+				B402D47D2AC46C1E0086E43C /* KarloUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B4091E5F2AC42E5500F2957A /* Resources */ = {
+		B402D4622AC46C1D0086E43C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B402D4CC2AC46D950086E43C /* Secret.plist in Resources */,
+				B402D4CA2AC46D950086E43C /* SampleImageData.txt in Resources */,
+				B42067F12AC46DD2004A3BEB /* Preview Assets.xcassets in Resources */,
+				B402D4CB2AC46D950086E43C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B402D4722AC46C1E0086E43C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4C6E8782A9C70BC00137072 /* Resources */ = {
+		B402D47C2AC46C1E0086E43C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4091E742AC432B400F2957A /* Secret.plist in Resources */,
-				B4C6E8852A9C70BD00137072 /* Preview Assets.xcassets in Resources */,
-				B4C6E8822A9C70BD00137072 /* Assets.xcassets in Resources */,
-				B4182CC02AA9C75500F85B91 /* SampleImageData.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B4091E5D2AC42E5500F2957A /* Sources */ = {
+		B402D4602AC46C1D0086E43C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4091E642AC42E5600F2957A /* KarloTests.swift in Sources */,
+				B402D4C42AC46D950086E43C /* ImageConfiguration.swift in Sources */,
+				B402D4C82AC46D950086E43C /* AppConstant.swift in Sources */,
+				B402D4D52AC46D950086E43C /* AlbumFeature.swift in Sources */,
+				B402D4D72AC46D950086E43C /* ImageGenerateFeature.swift in Sources */,
+				B402D4D62AC46D950086E43C /* AlbumView.swift in Sources */,
+				B402D4BE2AC46D950086E43C /* APIConstant.swift in Sources */,
+				B402D4D12AC46D950086E43C /* URLRequest+.swift in Sources */,
+				B402D4CD2AC46D950086E43C /* ImageManager.swift in Sources */,
+				B402D4D32AC46D950086E43C /* Root.swift in Sources */,
+				B402D4D42AC46D950086E43C /* RootView.swift in Sources */,
+				B402D4BF2AC46D950086E43C /* SampleData.swift in Sources */,
+				B402D4C22AC46D950086E43C /* KarloResponse.swift in Sources */,
+				B402D4C62AC46D950086E43C /* KeywordError.swift in Sources */,
+				B402D4DB2AC46D950086E43C /* KeywordTagView.swift in Sources */,
+				B402D4C92AC46D950086E43C /* KarloApp.swift in Sources */,
+				B402D4DA2AC46D950086E43C /* KeywordTagFeature.swift in Sources */,
+				B402D4D22AC46D950086E43C /* UIScreen+.swift in Sources */,
+				B402D4C52AC46D950086E43C /* ImageSaveError.swift in Sources */,
+				B402D4D02AC46D950086E43C /* Bundle+.swift in Sources */,
+				B402D4D92AC46D950086E43C /* KeywordInputView.swift in Sources */,
+				B402D4CF2AC46D950086E43C /* URL+.swift in Sources */,
+				B402D4D82AC46D950086E43C /* KeywordTag.swift in Sources */,
+				B402D4C72AC46D950086E43C /* NetworkError.swift in Sources */,
+				B402D4CE2AC46D950086E43C /* String+.swift in Sources */,
+				B402D4C02AC46D950086E43C /* KarloAPIService.swift in Sources */,
+				B402D4C32AC46D950086E43C /* ImageTransformation.swift in Sources */,
+				B402D4DC2AC46D950086E43C /* ImageGenerateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4C6E8762A9C70BC00137072 /* Sources */ = {
+		B402D4702AC46C1E0086E43C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B416EB902AB028E50065E33A /* APIConstant.swift in Sources */,
-				B40D50B72AB18E9C00006F74 /* ImageGenerateView.swift in Sources */,
-				B4182CC42AA9C8A600F85B91 /* SampleData.swift in Sources */,
-				B4845FAC2AB860EF00BDBE12 /* ImageManager.swift in Sources */,
-				B416EB922AB06EA60065E33A /* URL+.swift in Sources */,
-				B4091E722AC4323A00F2957A /* KarloResponse.swift in Sources */,
-				B4182CB42AA8BBA100F85B91 /* KeywordTag.swift in Sources */,
-				B4091E712AC4323A00F2957A /* ImageConfiguration.swift in Sources */,
-				B4182CB02AA8AB8E00F85B91 /* KeywordTagFeature.swift in Sources */,
-				B4845FAE2ABACEC800BDBE12 /* ImageSaveError.swift in Sources */,
-				B416EB942AB070060065E33A /* Bundle+.swift in Sources */,
-				B416EB9C2AB0D9DC0065E33A /* AlbumFeature.swift in Sources */,
-				B40D50C02AB199CD00006F74 /* ImageGenerateFeature.swift in Sources */,
-				B4182CB82AA973A000F85B91 /* KeywordTagView.swift in Sources */,
-				B4CB79542AA8838B0099DD1D /* KeywordError.swift in Sources */,
-				B40D50BB2AB18FA400006F74 /* RootView.swift in Sources */,
-				B4182CBA2AA9757100F85B91 /* KeywordInputView.swift in Sources */,
-				B4182CBC2AA98BCC00F85B91 /* AlbumView.swift in Sources */,
-				B40D50C22AB250B800006F74 /* AppConstant.swift in Sources */,
-				B4182CB22AA8AC5A00F85B91 /* UIScreen+.swift in Sources */,
-				B4182CAB2AA8994400F85B91 /* KarloAPIService.swift in Sources */,
-				B40D50BE2AB199A200006F74 /* Root.swift in Sources */,
-				B4182CC22AA9C85C00F85B91 /* NetworkError.swift in Sources */,
-				B416EB962AB079020065E33A /* URLRequest+.swift in Sources */,
-				B4CB79572AA883AD0099DD1D /* String+.swift in Sources */,
-				B4C6E87E2A9C70BC00137072 /* KarloApp.swift in Sources */,
-				B4091E702AC4323A00F2957A /* ImageTransformation.swift in Sources */,
+				B42067F62AC46F58004A3BEB /* ImageGenerationFeatureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B402D47A2AC46C1E0086E43C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B402D4852AC46C1E0086E43C /* KarloUITestsLaunchTests.swift in Sources */,
+				B402D4832AC46C1E0086E43C /* KarloUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B4091E662AC42E5600F2957A /* PBXTargetDependency */ = {
+		B402D4762AC46C1E0086E43C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B4C6E8792A9C70BC00137072 /* Karlo */;
-			targetProxy = B4091E652AC42E5600F2957A /* PBXContainerItemProxy */;
+			target = B402D4632AC46C1D0086E43C /* Karlo */;
+			targetProxy = B402D4752AC46C1E0086E43C /* PBXContainerItemProxy */;
+		};
+		B402D4802AC46C1E0086E43C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B402D4632AC46C1D0086E43C /* Karlo */;
+			targetProxy = B402D47F2AC46C1E0086E43C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		B4091E682AC42E5600F2957A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7T7HF9QMND;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = main.KarloTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Karlo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Karlo";
-			};
-			name = Debug;
-		};
-		B4091E692AC42E5600F2957A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7T7HF9QMND;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = main.KarloTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Karlo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Karlo";
-			};
-			name = Release;
-		};
-		B4C6E89C2A9C70BD00137072 /* Debug */ = {
+		B402D4862AC46C1E0086E43C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -527,7 +559,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -537,7 +569,7 @@
 			};
 			name = Debug;
 		};
-		B4C6E89D2A9C70BD00137072 /* Release */ = {
+		B402D4872AC46C1E0086E43C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -581,7 +613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -591,7 +623,7 @@
 			};
 			name = Release;
 		};
-		B4C6E89F2A9C70BD00137072 /* Debug */ = {
+		B402D4892AC46C1E0086E43C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -602,7 +634,6 @@
 				DEVELOPMENT_TEAM = 7T7HF9QMND;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "사진 저장을 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -614,7 +645,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhilly.karlo;
+				PRODUCT_BUNDLE_IDENTIFIER = main.Karlo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -622,7 +653,7 @@
 			};
 			name = Debug;
 		};
-		B4C6E8A02A9C70BD00137072 /* Release */ = {
+		B402D48A2AC46C1E0086E43C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -633,7 +664,6 @@
 				DEVELOPMENT_TEAM = 7T7HF9QMND;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "사진 저장을 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -645,7 +675,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhilly.karlo;
+				PRODUCT_BUNDLE_IDENTIFIER = main.Karlo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -653,32 +683,117 @@
 			};
 			name = Release;
 		};
+		B402D48C2AC46C1E0086E43C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T7HF9QMND;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = main.KarloTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Karlo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Karlo";
+			};
+			name = Debug;
+		};
+		B402D48D2AC46C1E0086E43C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T7HF9QMND;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = main.KarloTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Karlo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Karlo";
+			};
+			name = Release;
+		};
+		B402D48F2AC46C1E0086E43C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T7HF9QMND;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = main.KarloUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Karlo;
+			};
+			name = Debug;
+		};
+		B402D4902AC46C1E0086E43C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T7HF9QMND;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = main.KarloUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Karlo;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B4091E672AC42E5600F2957A /* Build configuration list for PBXNativeTarget "KarloTests" */ = {
+		B402D45F2AC46C1D0086E43C /* Build configuration list for PBXProject "Karlo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4091E682AC42E5600F2957A /* Debug */,
-				B4091E692AC42E5600F2957A /* Release */,
+				B402D4862AC46C1E0086E43C /* Debug */,
+				B402D4872AC46C1E0086E43C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4C6E8752A9C70BC00137072 /* Build configuration list for PBXProject "Karlo" */ = {
+		B402D4882AC46C1E0086E43C /* Build configuration list for PBXNativeTarget "Karlo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4C6E89C2A9C70BD00137072 /* Debug */,
-				B4C6E89D2A9C70BD00137072 /* Release */,
+				B402D4892AC46C1E0086E43C /* Debug */,
+				B402D48A2AC46C1E0086E43C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4C6E89E2A9C70BD00137072 /* Build configuration list for PBXNativeTarget "Karlo" */ = {
+		B402D48B2AC46C1E0086E43C /* Build configuration list for PBXNativeTarget "KarloTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B4C6E89F2A9C70BD00137072 /* Debug */,
-				B4C6E8A02A9C70BD00137072 /* Release */,
+				B402D48C2AC46C1E0086E43C /* Debug */,
+				B402D48D2AC46C1E0086E43C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B402D48E2AC46C1E0086E43C /* Build configuration list for PBXNativeTarget "KarloUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B402D48F2AC46C1E0086E43C /* Debug */,
+				B402D4902AC46C1E0086E43C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -686,7 +801,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B416EB972AB0D7460065E33A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		B42067F22AC46DF5004A3BEB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
@@ -697,12 +812,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B416EB982AB0D7460065E33A /* ComposableArchitecture */ = {
+		B42067F32AC46DF5004A3BEB /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B416EB972AB0D7460065E33A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = B42067F22AC46DF5004A3BEB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = B4C6E8722A9C70BC00137072 /* Project object */;
+	rootObject = B402D45C2AC46C1D0086E43C /* Project object */;
 }
