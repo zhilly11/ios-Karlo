@@ -1,22 +1,24 @@
-# 🏞️ Karlo App
-<br>
-
 [![Swift 5.7](https://img.shields.io/badge/swift-5.7-ED523F.svg?style=flat)]() [![Xcode 14.3](https://img.shields.io/badge/Xcode-14.3-ED523F.svg?style=flat&color=blue)]()
 
 # Karlo App
 > `Karlo Ai`를 통해 이미지를 생성해주는 앱.
 
 # 목차
-1. 실행화면
-2. 기술 스택
-3. 기능
-4. 설계 및 구현
-5. 기술적 도전
-6. 트러블 슈팅
-7. 고민했던 점
+1. [실행화면](#-실행화면)
+2. [기술 스택](#-기술-스택)
+3. [기능](#-기능)
+4. [설계 및 기술적 도전](#-설계-및-기술적-도전)
+5. [기술적 도전](#-기술적-도전)
+6. [트러블 슈팅](#-트러블-슈팅)
+7. [고민했던 점](#-고민했던-점)
 
+## 실행화면
 
-## 🛠 기술 스택
+| 메인 화면 | 이미지 생성하기 | 생성된 이미지 | 공유 및 저장 |
+| :--------: | :--------: | :--------: | :--------: | 
+| <img src = "https://github.com/zhilly11/ios-Karlo/assets/99257965/53209059-4f48-4796-bd97-88875024beaa" width=300 height=410> | <img src = "https://github.com/zhilly11/ios-Karlo/assets/99257965/d79f47fd-a6fb-4e50-9569-6c1a99448dcf" width=300 height=410> | <img src = "https://github.com/zhilly11/ios-Karlo/assets/99257965/811ebf0b-74a5-45c0-aebc-38ccf19888fd" width=300 height=410> | <img src = "https://github.com/zhilly11/ios-Karlo/assets/99257965/af2dbe8d-9b83-471c-b326-0143d7f00a80" width=300 height=410> |
+
+## 기술 스택
 
 #### 개발환경
 - `iOS DeploymentTarget` : `16.0+`
@@ -54,3 +56,5 @@ GCD를 사용했을 때 보다 코드의 가독성이 향상되고, 성능측면
 <img src = "https://hackmd.io/_uploads/Sk6AXZoJ6.png" widht = 300 height = 250>
 
 ## 트러블 슈팅
+
+## 고민했던 점
