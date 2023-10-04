@@ -42,6 +42,7 @@
 		B42067F12AC46DD2004A3BEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42067F02AC46DD2004A3BEB /* Preview Assets.xcassets */; };
 		B42067F42AC46DF5004A3BEB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B42067F32AC46DF5004A3BEB /* ComposableArchitecture */; };
 		B42067F62AC46F58004A3BEB /* ImageGenerationFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */; };
+		B47AD5C22ACD46D400D9A5FD /* TagStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47AD5C12ACD46D400D9A5FD /* TagStore.swift */; };
 		B48913F12AC805E00032C74C /* KeywordTagFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48913F02AC805E00032C74C /* KeywordTagFeatureTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		B402D4BD2AC46D940086E43C /* ImageGenerateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerateView.swift; sourceTree = "<group>"; };
 		B42067F02AC46DD2004A3BEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationFeatureTests.swift; sourceTree = "<group>"; };
+		B47AD5C12ACD46D400D9A5FD /* TagStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagStore.swift; sourceTree = "<group>"; };
 		B48913F02AC805E00032C74C /* KeywordTagFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTagFeatureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,6 +309,7 @@
 				B402D4BA2AC46D940086E43C /* KeywordInputView.swift */,
 				B402D4BB2AC46D940086E43C /* KeywordTagFeature.swift */,
 				B402D4BC2AC46D940086E43C /* KeywordTagView.swift */,
+				B47AD5C12ACD46D400D9A5FD /* TagStore.swift */,
 			);
 			path = KeywordTag;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				B402D4D72AC46D950086E43C /* ImageGenerateFeature.swift in Sources */,
 				B402D4D62AC46D950086E43C /* AlbumView.swift in Sources */,
 				B402D4BE2AC46D950086E43C /* APIConstant.swift in Sources */,
+				B47AD5C22ACD46D400D9A5FD /* TagStore.swift in Sources */,
 				B402D4D12AC46D950086E43C /* URLRequest+.swift in Sources */,
 				B402D4CD2AC46D950086E43C /* ImageManager.swift in Sources */,
 				B402D4D32AC46D950086E43C /* Root.swift in Sources */,

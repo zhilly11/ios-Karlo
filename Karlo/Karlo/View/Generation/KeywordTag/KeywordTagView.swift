@@ -16,7 +16,7 @@ struct KeywordTagView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 4) {
-                ForEach(viewStore.rows, id:\.self) { rows in
+                ForEach(viewStore.tagStore.rows, id:\.self) { rows in
                     HStack(spacing: 6) {
                         ForEach(rows) { row in
                             Text(row.name)

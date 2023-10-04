@@ -84,8 +84,8 @@ struct ImageGenerateFeature: Reducer {
 extension ImageGenerateFeature {
     func exportImageConfigurationRequest(from state: State) -> ImageConfigurationRequest {
         return ImageConfigurationRequest(
-            prompt: state.prompt.prompt,
-            negativePrompt: state.negativePrompt.prompt,
+            prompt: state.prompt.tagStore.prompt,
+            negativePrompt: state.negativePrompt.tagStore.prompt,
             width: state.imageWidth,
             height: state.imageHeight,
             upscale: state.imageUpscale,

@@ -18,7 +18,7 @@ struct KeywordInputView: View {
             TextField(
                 Constant.Text.prompt,
                 text: viewStore.binding(
-                    get: \.tagText,
+                    get: \.tagStore.tagText,
                     send: KeywordTagFeature.Action.textChanged
                 )
             )

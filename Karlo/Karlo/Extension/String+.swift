@@ -21,4 +21,12 @@ extension String {
         
         return self + Constant.Symbol.colon + "\(value)"
     }
+    
+    func isCorrect(currentKeywordCount: Int) throws -> Bool {
+        if self == .init() { throw KeywordError.emptyKeyword }
+        if self.hasHangul { throw KeywordError.containHangul }
+        if currentKeywordCount + self.count >= Constant.Karlo.promptMaxSize { throw KeywordError.overRange }
+        
+        return true
+    }
 }
