@@ -42,6 +42,7 @@
 		B42067F12AC46DD2004A3BEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42067F02AC46DD2004A3BEB /* Preview Assets.xcassets */; };
 		B42067F42AC46DF5004A3BEB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B42067F32AC46DF5004A3BEB /* ComposableArchitecture */; };
 		B42067F62AC46F58004A3BEB /* ImageGenerationFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */; };
+		B48913F12AC805E00032C74C /* KeywordTagFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48913F02AC805E00032C74C /* KeywordTagFeatureTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		B402D4BD2AC46D940086E43C /* ImageGenerateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerateView.swift; sourceTree = "<group>"; };
 		B42067F02AC46DD2004A3BEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationFeatureTests.swift; sourceTree = "<group>"; };
+		B48913F02AC805E00032C74C /* KeywordTagFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTagFeatureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */,
+				B48913F02AC805E00032C74C /* KeywordTagFeatureTests.swift */,
 			);
 			path = KarloTests;
 			sourceTree = "<group>";
@@ -263,8 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				B402D4B02AC46D940086E43C /* Root */,
-				B402D4B32AC46D940086E43C /* Album */,
 				B402D4B62AC46D940086E43C /* Generation */,
+				B402D4B32AC46D940086E43C /* Album */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B42067F62AC46F58004A3BEB /* ImageGenerationFeatureTests.swift in Sources */,
+				B48913F12AC805E00032C74C /* KeywordTagFeatureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
