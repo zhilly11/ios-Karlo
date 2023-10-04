@@ -16,8 +16,8 @@ struct KeywordTagFeature: Reducer {
     enum KeywordAction: Equatable {
         case alert(PresentationAction<Alert>)
         case textChanged(String)
-        case addTag
-        case removeTag(id: String)
+        case addTag(id: UUID = .init())
+        case removeTag(id: UUID)
         case getTags
         
         enum Alert: Equatable { }
@@ -34,9 +34,9 @@ struct KeywordTagFeature: Reducer {
             case .alert:
                 return .none
                 
-            case .addTag:
+            case .addTag(let id):
                 do {
-                    try addTag(into: &state)
+                    try addTag(into: &state, id: id)
                     return .none
                 } catch let error {
                     state.alert = AlertState {
@@ -62,7 +62,7 @@ struct KeywordTagFeature: Reducer {
 }
 
 extension KeywordTagFeature {
-    private func addTag(into state: inout KeywordState) throws {
+    private func addTag(into state: inout KeywordState, id: UUID = .init()) throws {
         var keywordCount: Int = 0
         
         state.tags.forEach { tag in
@@ -72,14 +72,14 @@ extension KeywordTagFeature {
         let isCorrect = try isCorrect(state.tagText, currentKeywordCount: keywordCount)
         
         if isCorrect {
-            state.tags.append(Tag(name: state.tagText))
+            state.tags.append(Tag(id: id, name: state.tagText))
             state.tagText = .init()
             state.prompt = generatePrompt(state.tags)
             getTags(into: &state)
         }
     }
     
-    private func removeTag(into state: inout KeywordState, by id: String) {
+    private func removeTag(into state: inout KeywordState, by id: UUID) {
         state.tags = state.tags.filter{ $0.id != id }
         state.prompt = generatePrompt(state.tags)
         getTags(into: &state)

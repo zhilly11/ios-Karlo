@@ -4,7 +4,7 @@
 import Foundation
 
 struct Tag: Identifiable, Hashable {
-    var id: String = UUID().uuidString
+    var id: UUID = .init()
     var name: String
     var size: CGFloat = 0
 }
