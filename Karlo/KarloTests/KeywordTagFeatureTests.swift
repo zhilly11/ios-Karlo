@@ -13,13 +13,15 @@ final class KeywordTagFeatureTests: XCTestCase {
         
         let store = TestStore(initialState: KeywordTagFeature.State()) {
             KeywordTagFeature()
+        } withDependencies: {
+            $0.uuid = .incrementing
         }
         
         await store.send(.textChanged(testWrongPrompt)) {
             $0.tagStore.tagText = testWrongPrompt
         }
         
-        await store.send(.addTag()) {
+        await store.send(.addTag) {
             $0.alert = AlertState {
                 TextState(KeywordError.containHangul.localizedDescription)
             } actions: {
@@ -32,17 +34,19 @@ final class KeywordTagFeatureTests: XCTestCase {
     
     func testAddRightKeywordAndRemove() async {
         let testPrompt: String = "Pepe the frog playing Game"
-        let testTagID: UUID = .init()
+        let testTagID: UUID = UUID(0)
         
         let store = TestStore(initialState: KeywordTagFeature.State()) {
             KeywordTagFeature()
+        } withDependencies: {
+            $0.uuid = .incrementing
         }
         
         await store.send(.textChanged(testPrompt)) {
             $0.tagStore.tagText = testPrompt
         }
         
-        await store.send(.addTag(id: testTagID)) {
+        await store.send(.addTag) {
             let tag: Tag = Tag(id: testTagID,
                                name: testPrompt,
                                size: testPrompt.getSize())

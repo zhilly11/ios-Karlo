@@ -24,7 +24,7 @@ struct KeywordInputView: View {
             )
             
             Button(Constant.ButtonTitle.add) {
-                viewStore.send(.addTag())
+                viewStore.send(.addTag)
             }
             .alert(
                 store: self.store.scope(state: \.$alert, action: { .alert($0) })

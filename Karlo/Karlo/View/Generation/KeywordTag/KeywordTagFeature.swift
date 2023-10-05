@@ -13,12 +13,14 @@ struct KeywordTagFeature: Reducer {
     enum KeywordAction: Equatable {
         case alert(PresentationAction<Alert>)
         case textChanged(String)
-        case addTag(id: UUID = .init())
+        case addTag
         case removeTag(id: UUID)
         case getTags
         
         enum Alert: Equatable { }
     }
+    
+    @Dependency(\.uuid) var uuid
     
     var body: some Reducer<KeywordState, KeywordAction> {
         Reduce { state, action in
@@ -28,12 +30,9 @@ struct KeywordTagFeature: Reducer {
                 state.tagStore.tagText = text
                 return .none
                 
-            case .alert:
-                return .none
-                
-            case .addTag(let id):
+            case .addTag:
                 do {
-                    try state.tagStore.addTag(id: id)
+                    try state.tagStore.addTag(id: self.uuid())
                     return .none
                 } catch let error {
                     state.alert = AlertState {
@@ -49,8 +48,7 @@ struct KeywordTagFeature: Reducer {
                 state.tagStore.removeTag(by: id)
                 return .none
                 
-            case .getTags:
-                state.tagStore.getTags()
+            default:
                 return .none
             }
         }
