@@ -42,6 +42,7 @@
 		B42067F12AC46DD2004A3BEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42067F02AC46DD2004A3BEB /* Preview Assets.xcassets */; };
 		B42067F42AC46DF5004A3BEB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B42067F32AC46DF5004A3BEB /* ComposableArchitecture */; };
 		B42067F62AC46F58004A3BEB /* ImageGenerationFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */; };
+		B4569E092AD3C3C700B4940D /* KarloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4569E082AD3C3C700B4940D /* KarloClient.swift */; };
 		B47AD5C22ACD46D400D9A5FD /* TagStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47AD5C12ACD46D400D9A5FD /* TagStore.swift */; };
 		B48913F12AC805E00032C74C /* KeywordTagFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48913F02AC805E00032C74C /* KeywordTagFeatureTests.swift */; };
 /* End PBXBuildFile section */
@@ -102,6 +103,7 @@
 		B402D4BD2AC46D940086E43C /* ImageGenerateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerateView.swift; sourceTree = "<group>"; };
 		B42067F02AC46DD2004A3BEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationFeatureTests.swift; sourceTree = "<group>"; };
+		B4569E082AD3C3C700B4940D /* KarloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarloClient.swift; sourceTree = "<group>"; };
 		B47AD5C12ACD46D400D9A5FD /* TagStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagStore.swift; sourceTree = "<group>"; };
 		B48913F02AC805E00032C74C /* KeywordTagFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTagFeatureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +195,7 @@
 				B402D4932AC46D930086E43C /* APIConstant.swift */,
 				B402D4942AC46D930086E43C /* SampleData.swift */,
 				B402D4952AC46D930086E43C /* KarloAPIService.swift */,
+				B4569E082AD3C3C700B4940D /* KarloClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -209,8 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				B402D4992AC46D930086E43C /* KarloResponse.swift */,
-				B402D49A2AC46D930086E43C /* ImageTransformation.swift */,
 				B402D49B2AC46D930086E43C /* ImageConfiguration.swift */,
+				B402D49A2AC46D930086E43C /* ImageTransformation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				B402D4D42AC46D950086E43C /* RootView.swift in Sources */,
 				B402D4BF2AC46D950086E43C /* SampleData.swift in Sources */,
 				B402D4C22AC46D950086E43C /* KarloResponse.swift in Sources */,
+				B4569E092AD3C3C700B4940D /* KarloClient.swift in Sources */,
 				B402D4C62AC46D950086E43C /* KeywordError.swift in Sources */,
 				B402D4DB2AC46D950086E43C /* KeywordTagView.swift in Sources */,
 				B402D4C92AC46D950086E43C /* KarloApp.swift in Sources */,

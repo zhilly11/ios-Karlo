@@ -5,8 +5,6 @@ import SwiftUI
 import ComposableArchitecture
 
 struct AlbumFeature: Reducer {
-    private let apiService: KarloAPI = .init(session: URLSession.shared)
-    
     struct AlbumState: Equatable {
         @PresentationState var alert: AlertState<Action.Alert>?
         
@@ -18,29 +16,39 @@ struct AlbumFeature: Reducer {
     enum AlbumAction: Equatable {
         case alert(PresentationAction<Alert>)
         case onAppear
-        case imageResponse(TaskResult<[Data]>)
+        case imageResponse(TaskResult<KarloResponse>)
         case setProceeding(_ flag: Bool)
         case saveImage(data: Data)
         
         enum Alert: Equatable { }
     }
     
+    @Dependency(\.karloClient) var karloClient
+    
     var body: some Reducer<AlbumState, AlbumAction> {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                return .run { [info = state.imageConfigurationRequest ] send in
+                return .run { [info = state.imageConfigurationRequest] send in
                     await send(.setProceeding(true))
-                    await send(.imageResponse(
-                        TaskResult { try await
-                            apiService.request(data: info)
-                        })
+                    await send(
+                        .imageResponse(
+                            TaskResult {
+                                try await self.karloClient.fetch(info)
+                            }
+                        ),
+                        animation: .default
                     )
                     await send(.setProceeding(false))
                 }
                 
             case let .imageResponse(.success(response)):
-                state.imageData = response
+                response.images.forEach {
+                    if let data = Data(base64Encoded: $0.image) {
+                        state.imageData.append(data)
+                    }
+                }
+                
                 return .none
                 
             case .imageResponse(.failure):
