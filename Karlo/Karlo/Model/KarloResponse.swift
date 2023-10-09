@@ -3,7 +3,9 @@
 
 import Foundation
 
-struct KarloResponse: Decodable {
+protocol KarloResponsible: Decodable { }
+
+struct KarloResponse: KarloResponsible {  
     let id: String
     let modelVersion: String
     let images: [ResultImage]
@@ -12,6 +14,12 @@ struct KarloResponse: Decodable {
         case id
         case modelVersion = "model_version"
         case images
+    }
+}
+
+extension KarloResponse: Equatable {
+    static func == (lhs: KarloResponse, rhs: KarloResponse) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 

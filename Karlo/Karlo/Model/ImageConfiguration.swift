@@ -3,7 +3,9 @@
 
 import Foundation
 
-struct ImageConfigurationRequest: Encodable, Equatable {
+protocol KarloRequestable: Encodable { }
+
+struct ImageConfigurationRequest: KarloRequestable, Equatable {
     let prompt: String
     let negativePrompt: String
     let width: Int

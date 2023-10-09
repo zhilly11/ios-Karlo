@@ -13,7 +13,7 @@ struct KarloAPI {
     /// KarolAPI에게 Image 생성을 요청하는 method 입니다.
     /// 매개변수에 이미지 생성 조건을 전달해 요청합니다.
     /// Image의 Data를 배열에 담아 return 합니다.
-    func request<T: Encodable>(data: T) async throws -> [Data] {
+    func request<T: Encodable>(data: T) async throws -> KarloResponse {
         let encoder: JSONEncoder = .init()
         let jsonData: Data = try encoder.encode(data)
         var endPoint: EndPoint
@@ -65,17 +65,10 @@ extension KarloAPI {
         return request
     }
     
-    private func decodeResponse(data: Data) throws -> [Data] {
+    private func decodeResponse(data: Data) throws -> KarloResponse {
         let decoder: JSONDecoder = .init()
-        let responseData = try decoder.decode(KarloResponse.self, from: data)
-        var result: [Data] = .init()
-        
-        responseData.images.forEach {
-            if let data = Data(base64Encoded: $0.image) {
-                result.append(data)
-            }
-        }
-        
-        return result
+        let responseData: KarloResponse = try decoder.decode(KarloResponse.self, from: data)
+        //print(responseData)
+        return responseData
     }
 }
