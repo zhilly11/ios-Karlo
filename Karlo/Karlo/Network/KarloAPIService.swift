@@ -38,7 +38,7 @@ struct KarloAPI {
             throw NetworkError.invalidServerResponse
         }
         
-        return try decodeResponse(data: data)
+        return try JSONDecoder.decodeResponse(data)
     }
 }
 
@@ -63,12 +63,5 @@ extension KarloAPI {
         request.setupHeader(contentTypeHeader)
         
         return request
-    }
-    
-    private func decodeResponse(data: Data) throws -> KarloResponse {
-        let decoder: JSONDecoder = .init()
-        let responseData: KarloResponse = try decoder.decode(KarloResponse.self, from: data)
-        //print(responseData)
-        return responseData
     }
 }
