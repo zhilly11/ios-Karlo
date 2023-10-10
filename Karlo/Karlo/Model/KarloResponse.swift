@@ -23,6 +23,10 @@ extension KarloResponse: Equatable {
     }
 }
 
+extension KarloResponse {
+    static let mock = SampleData.fetchMockData()!
+}
+
 struct ResultImage: Decodable {
     let id: String
     let seed: Int

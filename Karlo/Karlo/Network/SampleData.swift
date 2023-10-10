@@ -35,4 +35,29 @@ struct SampleData {
             return .init()
         }
     }
+    
+    static func fetchMockData() -> KarloResponse? {
+        if let path = Bundle.main.path(forResource: "MockResponseData.txt", ofType: nil) {
+            do {
+                let fileContents = try String(contentsOfFile: path, encoding: .utf8)
+                
+                if let data = fileContents.data(using: .utf8) {
+                    do {
+                        return try JSONDecoder.decodeResponse(data)
+                    } catch {
+                        print("파일 읽기 중 에러 발생: \(error)")
+                        return nil
+                    }
+                }
+            } catch {
+                print("파일 읽기 중 에러 발생: \(error)")
+                return nil
+            }
+        } else {
+            print("파일을 찾을 수 없습니다.")
+            return nil
+        }
+        
+        return nil
+    }
 }
