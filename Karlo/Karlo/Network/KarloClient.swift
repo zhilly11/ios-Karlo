@@ -23,13 +23,12 @@ extension KarloClient: DependencyKey {
             return try await karloAPI.request(data: imageInfo)
         }
     )
+    
+    static let previewValue = Self(
+        fetch: { _ in .mock }
+    )
 
     static let testValue = Self(
         fetch: unimplemented("\(Self.self).fetch")
     )
 }
-//
-//extension KarloResponse {
-//    static let mock = Self(
-//    )
-//}
