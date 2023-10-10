@@ -42,10 +42,16 @@ struct AlbumFeature: Reducer {
                         state.imageData.append(data)
                     }
                 }
-                
                 return .none
                 
-            case .imageResponse(.failure):
+            case let .imageResponse(.failure(error)):
+                state.alert = AlertState {
+                    TextState(error.localizedDescription)
+                } actions: {
+                    ButtonState(role: .none) {
+                        TextState(Constant.Text.check)
+                    }
+                }
                 return .none
                 
             case let .setProceeding(flag):
