@@ -42,7 +42,10 @@
 		B42067F12AC46DD2004A3BEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42067F02AC46DD2004A3BEB /* Preview Assets.xcassets */; };
 		B42067F42AC46DF5004A3BEB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B42067F32AC46DF5004A3BEB /* ComposableArchitecture */; };
 		B42067F62AC46F58004A3BEB /* ImageGenerationFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */; };
+		B4569E072ACD75F200B4940D /* AlbumFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4569E062ACD75F200B4940D /* AlbumFeatureTests.swift */; };
 		B4569E092AD3C3C700B4940D /* KarloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4569E082AD3C3C700B4940D /* KarloClient.swift */; };
+		B4569E0B2AD4D1F700B4940D /* MockResponseData.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4569E0A2AD4D1F700B4940D /* MockResponseData.txt */; };
+		B4569E0D2AD4D28800B4940D /* JSONDecoder+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4569E0C2AD4D28800B4940D /* JSONDecoder+.swift */; };
 		B47AD5C22ACD46D400D9A5FD /* TagStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47AD5C12ACD46D400D9A5FD /* TagStore.swift */; };
 		B48913F12AC805E00032C74C /* KeywordTagFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48913F02AC805E00032C74C /* KeywordTagFeatureTests.swift */; };
 /* End PBXBuildFile section */
@@ -103,7 +106,10 @@
 		B402D4BD2AC46D940086E43C /* ImageGenerateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerateView.swift; sourceTree = "<group>"; };
 		B42067F02AC46DD2004A3BEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationFeatureTests.swift; sourceTree = "<group>"; };
+		B4569E062ACD75F200B4940D /* AlbumFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumFeatureTests.swift; sourceTree = "<group>"; };
 		B4569E082AD3C3C700B4940D /* KarloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarloClient.swift; sourceTree = "<group>"; };
+		B4569E0A2AD4D1F700B4940D /* MockResponseData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MockResponseData.txt; sourceTree = "<group>"; };
+		B4569E0C2AD4D28800B4940D /* JSONDecoder+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+.swift"; sourceTree = "<group>"; };
 		B47AD5C12ACD46D400D9A5FD /* TagStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagStore.swift; sourceTree = "<group>"; };
 		B48913F02AC805E00032C74C /* KeywordTagFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordTagFeatureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +182,7 @@
 			children = (
 				B42067F52AC46F58004A3BEB /* ImageGenerationFeatureTests.swift */,
 				B48913F02AC805E00032C74C /* KeywordTagFeatureTests.swift */,
+				B4569E062ACD75F200B4940D /* AlbumFeatureTests.swift */,
 			);
 			path = KarloTests;
 			sourceTree = "<group>";
@@ -241,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				B402D4A42AC46D940086E43C /* SampleImageData.txt */,
+				B4569E0A2AD4D1F700B4940D /* MockResponseData.txt */,
 				B402D4A52AC46D940086E43C /* Assets.xcassets */,
 				B402D4A62AC46D940086E43C /* Secret.plist */,
 			);
@@ -263,6 +271,7 @@
 				B402D4AC2AC46D940086E43C /* Bundle+.swift */,
 				B402D4AD2AC46D940086E43C /* URLRequest+.swift */,
 				B402D4AE2AC46D940086E43C /* UIScreen+.swift */,
+				B4569E0C2AD4D28800B4940D /* JSONDecoder+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -429,6 +438,7 @@
 			files = (
 				B402D4CC2AC46D950086E43C /* Secret.plist in Resources */,
 				B402D4CA2AC46D950086E43C /* SampleImageData.txt in Resources */,
+				B4569E0B2AD4D1F700B4940D /* MockResponseData.txt in Resources */,
 				B42067F12AC46DD2004A3BEB /* Preview Assets.xcassets in Resources */,
 				B402D4CB2AC46D950086E43C /* Assets.xcassets in Resources */,
 			);
@@ -481,6 +491,7 @@
 				B402D4D82AC46D950086E43C /* KeywordTag.swift in Sources */,
 				B402D4C72AC46D950086E43C /* NetworkError.swift in Sources */,
 				B402D4CE2AC46D950086E43C /* String+.swift in Sources */,
+				B4569E0D2AD4D28800B4940D /* JSONDecoder+.swift in Sources */,
 				B402D4C02AC46D950086E43C /* KarloAPIService.swift in Sources */,
 				B402D4C32AC46D950086E43C /* ImageTransformation.swift in Sources */,
 				B402D4DC2AC46D950086E43C /* ImageGenerateView.swift in Sources */,
@@ -492,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B42067F62AC46F58004A3BEB /* ImageGenerationFeatureTests.swift in Sources */,
+				B4569E072ACD75F200B4940D /* AlbumFeatureTests.swift in Sources */,
 				B48913F12AC805E00032C74C /* KeywordTagFeatureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
