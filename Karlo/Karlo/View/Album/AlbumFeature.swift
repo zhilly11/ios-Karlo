@@ -31,14 +31,8 @@ struct AlbumFeature: Reducer {
             case .onAppear:
                 return .run { [info = state.imageConfigurationRequest] send in
                     await send(.setProceeding(true))
-                    await send(
-                        .imageResponse(
-                            TaskResult {
-                                try await self.karloClient.fetch(info)
-                            }
-                        ),
-                        animation: .default
-                    )
+                    await send(.imageResponse(TaskResult { try await self.karloClient.fetch(info) }),
+                               animation: .default)
                     await send(.setProceeding(false))
                 }
                 
