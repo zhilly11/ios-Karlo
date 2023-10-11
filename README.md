@@ -133,6 +133,7 @@ func data(for request: URLRequest, delegate: (URLSessionTaskDelegate)? = nil) as
 ### Custom View로 Tag 기능 구현
 
 여러 키워드를 입력할 수 있어야하고 사용자가 손쉽게 추가 및 삭제가 가능해야 하기 때문에 Tag 기능을 활용하여 구현하였습니다.
+<br>
 <img src = "https://github.com/zhilly11/ios-Karlo/assets/99257965/9d95b8f0-f5c7-40fa-9d9c-c436e1fcfd35" widht = 300 height = 250>
 
 ### Unit Test
