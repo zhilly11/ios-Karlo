@@ -75,6 +75,11 @@ SwiftUI 프레임워크를 사용하는 환경에서 앱의 상태를 관리함�
 
 또한 TCA를 채택함으로써 앱을 단방향의 구조로 만들 수 있게 되었습니다.
 
+![image](https://github.com/zhilly11/ios-Karlo/assets/99257965/2847a65e-2c77-4a7a-b041-696cc5e10aa3)
+
+[이미지 출처: [Link](https://medium.com/riiid-teamblog-kr/riiid%EC%9D%98-swift-composable-architecture-231a665e5f47)]
+
+
 ### TCA - DependencyKey를 활용한 API Client 구현
 
 DependencyKey 프로토콜을 활용해 앱 구동에서 사용하는 값, Preview에서 사용하는 값, Test에서 사용하는 값을 직접적으로 명시하지 않아도 `@Dependency` 키워드를 사용해 사용할 수 있도록 구현하였습니다. DependencyKey를 활용하면서 의존성 관리를 직접적으로 구현하지 않아도 가능하게 되었습니다.
