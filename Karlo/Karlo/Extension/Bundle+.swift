@@ -23,9 +23,11 @@ extension Bundle {
     }
     
     var apiKey: String? {
-        guard let filePath: String = self.path(forResource: file.secret.name, ofType: file.secret.type),
-              let resource: NSDictionary = .init(contentsOfFile: filePath),
-              let key: String = resource["API_KEY"] as? String else {
+        guard let plistUrl = self.url(forResource: file.secret.name, withExtension: file.secret.type),
+              let plistData = try? Data(contentsOf: plistUrl),
+              let plistDictionary = try? PropertyListSerialization.propertyList(from: plistData, format: nil),
+              let resource = plistDictionary as? [String: AnyObject],
+              let key = resource["API_KEY"] as? String else {
             return nil
         }
         
